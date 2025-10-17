@@ -1,0 +1,10 @@
+name = "countries-api"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+[site]
+bucket = "./data"
+
+[vars]
+# Optional variables (example)
+DISABLED = "false"

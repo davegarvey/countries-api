@@ -1,0 +1,32 @@
+[
+    {
+        "name": "France",
+        "code": "FR",
+        "region": "Europe",
+        "capital": "Paris"
+    },
+    {
+        "name": "Japan",
+        "code": "JP",
+        "region": "Asia",
+        "capital": "Tokyo"
+    },
+    {
+        "name": "Brazil",
+        "code": "BR",
+        "region": "Americas",
+        "capital": "Brasília"
+    },
+    {
+        "name": "Kenya",
+        "code": "KE",
+        "region": "Africa",
+        "capital": "Nairobi"
+    },
+    {
+        "name": "Australia",
+        "code": "AU",
+        "region": "Oceania",
+        "capital": "Canberra"
+    }
+]

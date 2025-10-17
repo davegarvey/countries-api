@@ -21,50 +21,8 @@ function jsonResponse(data, status = 200) {
     });
 }
 
-export default {
-    async fetch(request, env) {
-        // Handle CORS preflight
-        if (request.method === 'OPTIONS') {
-            return new Response(null, { headers: corsHeaders() });
-        }
-
-        if (env.DISABLED === 'true') {
-            return new Response('API temporarily disabled', { status: 503 });
-        }
-
-        const url = new URL(request.url);
-        const path = url.pathname.split('/').filter(Boolean);
-
-        // GET /docs - Interactive API documentation with ReDoc
-        if (path[0] === 'docs') {
-            const html = `<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countries API - Documentation</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
-    <style>
-        body { margin: 0; padding: 0; font-family: sans-serif; }
-        redoc { display: block; }
-    </style>
-</head>
-<body>
-    <redoc spec-url="/openapi.json"></redoc>
-    <script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"></script>
-</body>
-</html>`;
-            return new Response(html, {
-                headers: {
-                    'Content-Type': 'text/html',
-                    ...corsHeaders(),
-                },
-            });
-        }
-
-        // Root endpoint - HTML homepage
-        if (path.length === 0) {
-            const html = `<!DOCTYPE html>
+// Homepage HTML
+const homepageHTML = `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -210,7 +168,53 @@ export default {
     </div>
 </body>
 </html>`;
-            return new Response(html, {
+
+// Docs HTML
+const docsHTML = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries API - Documentation</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+    <style>
+        body { margin: 0; padding: 0; font-family: sans-serif; }
+        redoc { display: block; }
+    </style>
+</head>
+<body>
+    <redoc spec-url="/openapi.json"></redoc>
+    <script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"><\/script>
+</body>
+</html>`;
+
+export default {
+    async fetch(request, env) {
+        // Handle CORS preflight
+        if (request.method === 'OPTIONS') {
+            return new Response(null, { headers: corsHeaders() });
+        }
+
+        if (env.DISABLED === 'true') {
+            return new Response('API temporarily disabled', { status: 503 });
+        }
+
+        const url = new URL(request.url);
+        const path = url.pathname.split('/').filter(Boolean);
+
+        // GET / - Homepage
+        if (path.length === 0) {
+            return new Response(homepageHTML, {
+                headers: {
+                    'Content-Type': 'text/html',
+                    ...corsHeaders(),
+                },
+            });
+        }
+
+        // GET /docs - Interactive API documentation
+        if (path[0] === 'docs') {
+            return new Response(docsHTML, {
                 headers: {
                     'Content-Type': 'text/html',
                     ...corsHeaders(),

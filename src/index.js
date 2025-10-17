@@ -313,7 +313,10 @@ export default {
                 // GET /countries/{code}/flag
                 if (path[2] === 'flag') {
                     return new Response(country.flag, {
-                        headers: { 'Content-Type': 'text/plain', ...corsHeaders() },
+                        headers: {
+                            'Content-Type': 'text/plain; charset=utf-8',
+                            ...corsHeaders()
+                        },
                     });
                 }
 

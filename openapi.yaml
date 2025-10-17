@@ -1,0 +1,433 @@
+openapi: 3.0.0
+info:
+  title: Countries API
+  description: Free REST API for country data - perfect for testing, demos & learning
+  version: 1.0.0
+  contact:
+    name: David Garvey
+  license:
+    name: MIT
+
+servers:
+  - url: https://countries-api.davegarvey.workers.dev
+    description: Production server
+
+paths:
+  /:
+    get:
+      summary: API Documentation
+      description: Returns HTML documentation for the API
+      operationId: getDocumentation
+      tags:
+        - General
+      responses:
+        '200':
+          description: HTML documentation page
+          content:
+            text/html:
+              schema:
+                type: string
+
+  /countries:
+    get:
+      summary: Get all countries
+      description: Get all countries with complete data. Supports filtering by region, subregion, currency, and language.
+      operationId: getAllCountries
+      tags:
+        - Countries
+      parameters:
+        - name: region
+          in: query
+          description: Filter by region (Africa, Americas, Asia, Europe, Oceania)
+          schema:
+            type: string
+          example: Europe
+        - name: subregion
+          in: query
+          description: Filter by subregion
+          schema:
+            type: string
+          example: Northern Europe
+        - name: currency
+          in: query
+          description: Filter by currency code
+          schema:
+            type: string
+          example: EUR
+        - name: language
+          in: query
+          description: Filter by language
+          schema:
+            type: string
+          example: Spanish
+        - name: limit
+          in: query
+          description: Limit number of results
+          schema:
+            type: integer
+            minimum: 1
+          example: 10
+      responses:
+        '200':
+          description: Array of countries
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Country'
+
+  /countries/random:
+    get:
+      summary: Get a random country
+      description: Get a random country - perfect for testing
+      operationId: getRandomCountry
+      tags:
+        - Countries
+      responses:
+        '200':
+          description: A random country
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Country'
+
+  /countries/{code}:
+    get:
+      summary: Get a specific country
+      description: Get country by country code (2-letter or 3-letter code)
+      operationId: getCountryByCode
+      tags:
+        - Countries
+      parameters:
+        - name: code
+          in: path
+          required: true
+          description: Country code (ISO 3166-1 alpha-2 or alpha-3)
+          schema:
+            type: string
+            example: US
+      responses:
+        '200':
+          description: Country data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Country'
+        '404':
+          description: Country not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /countries/{code}/flag:
+    get:
+      summary: Get country flag emoji
+      description: Get just the flag emoji for a country
+      operationId: getCountryFlag
+      tags:
+        - Countries
+      parameters:
+        - name: code
+          in: path
+          required: true
+          description: Country code (ISO 3166-1 alpha-2 or alpha-3)
+          schema:
+            type: string
+            example: US
+      responses:
+        '200':
+          description: Flag emoji
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: 🇺🇸
+        '404':
+          description: Country not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /countries/{code}/neighbors:
+    get:
+      summary: Get neighboring countries
+      description: Get neighboring countries by subregion
+      operationId: getCountryNeighbors
+      tags:
+        - Countries
+      parameters:
+        - name: code
+          in: path
+          required: true
+          description: Country code (ISO 3166-1 alpha-2 or alpha-3)
+          schema:
+            type: string
+            example: FR
+      responses:
+        '200':
+          description: Country and its neighbors
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Neighbors'
+        '404':
+          description: Country not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /regions:
+    get:
+      summary: Get all regions
+      description: Get all unique regions
+      operationId: getRegions
+      tags:
+        - Reference Data
+      responses:
+        '200':
+          description: Array of region names
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                example: [Africa, Americas, Asia, Europe, Oceania]
+
+  /subregions:
+    get:
+      summary: Get all subregions
+      description: Get all unique subregions
+      operationId: getSubregions
+      tags:
+        - Reference Data
+      responses:
+        '200':
+          description: Array of subregion names
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+
+  /currencies:
+    get:
+      summary: Get all currencies
+      description: Get all unique currencies
+      operationId: getCurrencies
+      tags:
+        - Reference Data
+      responses:
+        '200':
+          description: Array of currency codes
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                example: [AED, AFN, ALL, AMD]
+
+  /languages:
+    get:
+      summary: Get all languages
+      description: Get all unique languages
+      operationId: getLanguages
+      tags:
+        - Reference Data
+      responses:
+        '200':
+          description: Array of language names
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+
+  /search:
+    get:
+      summary: Search countries
+      description: Search countries by name or capital city
+      operationId: searchCountries
+      tags:
+        - Countries
+      parameters:
+        - name: q
+          in: query
+          required: true
+          description: Search query
+          schema:
+            type: string
+          example: island
+      responses:
+        '200':
+          description: Search results
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResults'
+        '400':
+          description: Missing query parameter
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /stats:
+    get:
+      summary: Get API statistics
+      description: Get global statistics and analytics
+      operationId: getStats
+      tags:
+        - General
+      responses:
+        '200':
+          description: Statistics
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Statistics'
+
+components:
+  schemas:
+    Country:
+      type: object
+      description: Country data object
+      properties:
+        name:
+          type: string
+          example: United States
+        code:
+          type: string
+          description: ISO 3166-1 alpha-2 code
+          example: US
+        alpha3Code:
+          type: string
+          description: ISO 3166-1 alpha-3 code
+          example: USA
+        capital:
+          type: string
+          example: Washington, D.C.
+        region:
+          type: string
+          example: Americas
+        subregion:
+          type: string
+          example: North America
+        population:
+          type: integer
+          example: 331002651
+        languages:
+          type: array
+          items:
+            type: string
+          example: [English]
+        currency:
+          type: string
+          description: Currency code
+          example: USD
+        flag:
+          type: string
+          description: Flag emoji
+          example: 🇺🇸
+        callingCode:
+          type: string
+          example: "1"
+
+    Neighbors:
+      type: object
+      description: Country with neighboring countries
+      properties:
+        country:
+          type: string
+          example: France
+        subregion:
+          type: string
+          example: Western Europe
+        neighbors:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              code:
+                type: string
+              flag:
+                type: string
+
+    SearchResults:
+      type: object
+      description: Search results
+      properties:
+        query:
+          type: string
+          example: island
+        count:
+          type: integer
+          example: 5
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/Country'
+
+    Statistics:
+      type: object
+      description: API statistics
+      properties:
+        totalCountries:
+          type: integer
+          example: 195
+        totalPopulation:
+          type: integer
+          example: 7874965825
+        regions:
+          type: integer
+          example: 5
+        subregions:
+          type: integer
+          example: 22
+        currencies:
+          type: integer
+          example: 142
+        languages:
+          type: integer
+          example: 184
+        countriesByRegion:
+          type: object
+          example:
+            Africa: 54
+            Americas: 35
+            Asia: 60
+            Europe: 50
+            Oceania: 14
+        mostPopulousCountry:
+          $ref: '#/components/schemas/Country'
+        leastPopulousCountry:
+          $ref: '#/components/schemas/Country'
+
+    Error:
+      type: object
+      description: Error response
+      properties:
+        error:
+          type: string
+          example: Country not found
+        message:
+          type: string
+
+  securitySchemes: {}
+
+tags:
+  - name: General
+    description: General API endpoints
+  - name: Countries
+    description: Country data endpoints
+  - name: Reference Data
+    description: Reference data endpoints (regions, currencies, etc.)

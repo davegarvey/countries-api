@@ -2,1183 +2,2562 @@
     {
         "name": "Afghanistan",
         "code": "AF",
+        "alpha3Code": "AFG",
+        "capital": "Kabul",
         "region": "Asia",
-        "capital": "Kabul"
+        "subregion": "Southern Asia",
+        "population": 38928346,
+        "languages": ["Pashto", "Dari"],
+        "currency": "AFN",
+        "flag": "🇦🇫",
+        "callingCode": "+93"
     },
     {
         "name": "Albania",
         "code": "AL",
+        "alpha3Code": "ALB",
+        "capital": "Tirana",
         "region": "Europe",
-        "capital": "Tirana"
+        "subregion": "Southern Europe",
+        "population": 2877797,
+        "languages": ["Albanian"],
+        "currency": "ALL",
+        "flag": "🇦🇱",
+        "callingCode": "+355"
     },
     {
         "name": "Algeria",
         "code": "DZ",
+        "alpha3Code": "DZA",
+        "capital": "Algiers",
         "region": "Africa",
-        "capital": "Algiers"
+        "subregion": "Northern Africa",
+        "population": 43851044,
+        "languages": ["Arabic"],
+        "currency": "DZD",
+        "flag": "🇩🇿",
+        "callingCode": "+213"
     },
     {
         "name": "Andorra",
         "code": "AD",
+        "alpha3Code": "AND",
+        "capital": "Andorra la Vella",
         "region": "Europe",
-        "capital": "Andorra la Vella"
+        "subregion": "Southern Europe",
+        "population": 77265,
+        "languages": ["Catalan"],
+        "currency": "EUR",
+        "flag": "🇦🇩",
+        "callingCode": "+376"
     },
     {
         "name": "Angola",
         "code": "AO",
+        "alpha3Code": "AGO",
+        "capital": "Luanda",
         "region": "Africa",
-        "capital": "Luanda"
+        "subregion": "Middle Africa",
+        "population": 32866272,
+        "languages": ["Portuguese"],
+        "currency": "AOA",
+        "flag": "🇦🇴",
+        "callingCode": "+244"
     },
     {
         "name": "Antigua and Barbuda",
         "code": "AG",
+        "alpha3Code": "ATG",
+        "capital": "Saint John's",
         "region": "Americas",
-        "capital": "Saint John's"
+        "subregion": "Caribbean",
+        "population": 97929,
+        "languages": ["English"],
+        "currency": "XCD",
+        "flag": "🇦🇬",
+        "callingCode": "+1268"
     },
     {
         "name": "Argentina",
         "code": "AR",
+        "alpha3Code": "ARG",
+        "capital": "Buenos Aires",
         "region": "Americas",
-        "capital": "Buenos Aires"
+        "subregion": "South America",
+        "population": 45195774,
+        "languages": ["Spanish"],
+        "currency": "ARS",
+        "flag": "🇦🇷",
+        "callingCode": "+54"
     },
     {
         "name": "Armenia",
         "code": "AM",
+        "alpha3Code": "ARM",
+        "capital": "Yerevan",
         "region": "Asia",
-        "capital": "Yerevan"
+        "subregion": "Western Asia",
+        "population": 2963243,
+        "languages": ["Armenian"],
+        "currency": "AMD",
+        "flag": "🇦🇲",
+        "callingCode": "+374"
     },
     {
         "name": "Australia",
         "code": "AU",
+        "alpha3Code": "AUS",
+        "capital": "Canberra",
         "region": "Oceania",
-        "capital": "Canberra"
+        "subregion": "Australia and New Zealand",
+        "population": 25499884,
+        "languages": ["English"],
+        "currency": "AUD",
+        "flag": "🇦🇺",
+        "callingCode": "+61"
     },
     {
         "name": "Austria",
         "code": "AT",
+        "alpha3Code": "AUT",
+        "capital": "Vienna",
         "region": "Europe",
-        "capital": "Vienna"
+        "subregion": "Central Europe",
+        "population": 9006398,
+        "languages": ["German"],
+        "currency": "EUR",
+        "flag": "🇦🇹",
+        "callingCode": "+43"
     },
     {
         "name": "Azerbaijan",
         "code": "AZ",
+        "alpha3Code": "AZE",
+        "capital": "Baku",
         "region": "Asia",
-        "capital": "Baku"
+        "subregion": "Western Asia",
+        "population": 10139177,
+        "languages": ["Azerbaijani"],
+        "currency": "AZN",
+        "flag": "🇦🇿",
+        "callingCode": "+994"
     },
     {
         "name": "Bahamas",
         "code": "BS",
+        "alpha3Code": "BHS",
+        "capital": "Nassau",
         "region": "Americas",
-        "capital": "Nassau"
+        "subregion": "Caribbean",
+        "population": 393244,
+        "languages": ["English"],
+        "currency": "BSD",
+        "flag": "🇧🇸",
+        "callingCode": "+1242"
     },
     {
         "name": "Bahrain",
         "code": "BH",
+        "alpha3Code": "BHR",
+        "capital": "Manama",
         "region": "Asia",
-        "capital": "Manama"
+        "subregion": "Western Asia",
+        "population": 1701575,
+        "languages": ["Arabic"],
+        "currency": "BHD",
+        "flag": "🇧🇭",
+        "callingCode": "+973"
     },
     {
         "name": "Bangladesh",
         "code": "BD",
+        "alpha3Code": "BGD",
+        "capital": "Dhaka",
         "region": "Asia",
-        "capital": "Dhaka"
+        "subregion": "Southern Asia",
+        "population": 164689383,
+        "languages": ["Bengali"],
+        "currency": "BDT",
+        "flag": "🇧🇩",
+        "callingCode": "+880"
     },
     {
         "name": "Barbados",
         "code": "BB",
+        "alpha3Code": "BRB",
+        "capital": "Bridgetown",
         "region": "Americas",
-        "capital": "Bridgetown"
+        "subregion": "Caribbean",
+        "population": 287375,
+        "languages": ["English"],
+        "currency": "BBD",
+        "flag": "🇧🇧",
+        "callingCode": "+1246"
     },
     {
         "name": "Belarus",
         "code": "BY",
+        "alpha3Code": "BLR",
+        "capital": "Minsk",
         "region": "Europe",
-        "capital": "Minsk"
+        "subregion": "Eastern Europe",
+        "population": 9449323,
+        "languages": ["Belarusian", "Russian"],
+        "currency": "BYN",
+        "flag": "🇧🇾",
+        "callingCode": "+375"
     },
     {
         "name": "Belgium",
         "code": "BE",
+        "alpha3Code": "BEL",
+        "capital": "Brussels",
         "region": "Europe",
-        "capital": "Brussels"
+        "subregion": "Western Europe",
+        "population": 11589623,
+        "languages": ["Dutch", "French", "German"],
+        "currency": "EUR",
+        "flag": "🇧🇪",
+        "callingCode": "+32"
     },
     {
         "name": "Belize",
         "code": "BZ",
+        "alpha3Code": "BLZ",
+        "capital": "Belmopan",
         "region": "Americas",
-        "capital": "Belmopan"
+        "subregion": "Central America",
+        "population": 397628,
+        "languages": ["English"],
+        "currency": "BZD",
+        "flag": "🇧🇿",
+        "callingCode": "+501"
     },
     {
         "name": "Benin",
         "code": "BJ",
+        "alpha3Code": "BEN",
+        "capital": "Porto-Novo",
         "region": "Africa",
-        "capital": "Porto-Novo"
+        "subregion": "Western Africa",
+        "population": 12123200,
+        "languages": ["French"],
+        "currency": "XOF",
+        "flag": "🇧🇯",
+        "callingCode": "+229"
     },
     {
         "name": "Bhutan",
         "code": "BT",
+        "alpha3Code": "BTN",
+        "capital": "Thimphu",
         "region": "Asia",
-        "capital": "Thimphu"
+        "subregion": "Southern Asia",
+        "population": 771608,
+        "languages": ["Dzongkha"],
+        "currency": "BTN",
+        "flag": "🇧🇹",
+        "callingCode": "+975"
     },
     {
         "name": "Bolivia",
         "code": "BO",
+        "alpha3Code": "BOL",
+        "capital": "Sucre",
         "region": "Americas",
-        "capital": "Sucre"
+        "subregion": "South America",
+        "population": 11673021,
+        "languages": ["Spanish", "Quechua", "Aymara"],
+        "currency": "BOB",
+        "flag": "🇧🇴",
+        "callingCode": "+591"
     },
     {
         "name": "Bosnia and Herzegovina",
         "code": "BA",
+        "alpha3Code": "BIH",
+        "capital": "Sarajevo",
         "region": "Europe",
-        "capital": "Sarajevo"
+        "subregion": "Southern Europe",
+        "population": 3280819,
+        "languages": ["Bosnian", "Croatian", "Serbian"],
+        "currency": "BAM",
+        "flag": "🇧🇦",
+        "callingCode": "+387"
     },
     {
         "name": "Botswana",
         "code": "BW",
+        "alpha3Code": "BWA",
+        "capital": "Gaborone",
         "region": "Africa",
-        "capital": "Gaborone"
+        "subregion": "Southern Africa",
+        "population": 2351627,
+        "languages": ["English", "Setswana"],
+        "currency": "BWP",
+        "flag": "🇧🇼",
+        "callingCode": "+267"
     },
     {
         "name": "Brazil",
         "code": "BR",
+        "alpha3Code": "BRA",
+        "capital": "Brasília",
         "region": "Americas",
-        "capital": "Brasília"
+        "subregion": "South America",
+        "population": 212559417,
+        "languages": ["Portuguese"],
+        "currency": "BRL",
+        "flag": "🇧🇷",
+        "callingCode": "+55"
     },
     {
         "name": "Brunei",
         "code": "BN",
+        "alpha3Code": "BRN",
+        "capital": "Bandar Seri Begawan",
         "region": "Asia",
-        "capital": "Bandar Seri Begawan"
+        "subregion": "South-Eastern Asia",
+        "population": 437479,
+        "languages": ["Malay"],
+        "currency": "BND",
+        "flag": "🇧🇳",
+        "callingCode": "+673"
     },
     {
         "name": "Bulgaria",
         "code": "BG",
+        "alpha3Code": "BGR",
+        "capital": "Sofia",
         "region": "Europe",
-        "capital": "Sofia"
+        "subregion": "Eastern Europe",
+        "population": 6948445,
+        "languages": ["Bulgarian"],
+        "currency": "BGN",
+        "flag": "🇧🇬",
+        "callingCode": "+359"
     },
     {
         "name": "Burkina Faso",
         "code": "BF",
+        "alpha3Code": "BFA",
+        "capital": "Ouagadougou",
         "region": "Africa",
-        "capital": "Ouagadougou"
+        "subregion": "Western Africa",
+        "population": 20903273,
+        "languages": ["French"],
+        "currency": "XOF",
+        "flag": "🇧🇫",
+        "callingCode": "+226"
     },
     {
         "name": "Burundi",
         "code": "BI",
+        "alpha3Code": "BDI",
+        "capital": "Gitega",
         "region": "Africa",
-        "capital": "Gitega"
+        "subregion": "Eastern Africa",
+        "population": 11890784,
+        "languages": ["Kirundi", "French"],
+        "currency": "BIF",
+        "flag": "🇧🇮",
+        "callingCode": "+257"
     },
     {
         "name": "Cabo Verde",
         "code": "CV",
+        "alpha3Code": "CPV",
+        "capital": "Praia",
         "region": "Africa",
-        "capital": "Praia"
+        "subregion": "Western Africa",
+        "population": 555987,
+        "languages": ["Portuguese"],
+        "currency": "CVE",
+        "flag": "🇨🇻",
+        "callingCode": "+238"
     },
     {
         "name": "Cambodia",
         "code": "KH",
+        "alpha3Code": "KHM",
+        "capital": "Phnom Penh",
         "region": "Asia",
-        "capital": "Phnom Penh"
+        "subregion": "South-Eastern Asia",
+        "population": 16718965,
+        "languages": ["Khmer"],
+        "currency": "KHR",
+        "flag": "🇰🇭",
+        "callingCode": "+855"
     },
     {
         "name": "Cameroon",
         "code": "CM",
+        "alpha3Code": "CMR",
+        "capital": "Yaoundé",
         "region": "Africa",
-        "capital": "Yaoundé"
+        "subregion": "Middle Africa",
+        "population": 26545863,
+        "languages": ["English", "French"],
+        "currency": "XAF",
+        "flag": "🇨🇲",
+        "callingCode": "+237"
     },
     {
         "name": "Canada",
         "code": "CA",
+        "alpha3Code": "CAN",
+        "capital": "Ottawa",
         "region": "Americas",
-        "capital": "Ottawa"
+        "subregion": "Northern America",
+        "population": 37742154,
+        "languages": ["English", "French"],
+        "currency": "CAD",
+        "flag": "🇨🇦",
+        "callingCode": "+1"
     },
     {
         "name": "Central African Republic",
         "code": "CF",
+        "alpha3Code": "CAF",
+        "capital": "Bangui",
         "region": "Africa",
-        "capital": "Bangui"
+        "subregion": "Middle Africa",
+        "population": 4829767,
+        "languages": ["French", "Sango"],
+        "currency": "XAF",
+        "flag": "🇨🇫",
+        "callingCode": "+236"
     },
     {
         "name": "Chad",
         "code": "TD",
+        "alpha3Code": "TCD",
+        "capital": "N'Djamena",
         "region": "Africa",
-        "capital": "N'Djamena"
+        "subregion": "Middle Africa",
+        "population": 16425864,
+        "languages": ["French", "Arabic"],
+        "currency": "XAF",
+        "flag": "🇹🇩",
+        "callingCode": "+235"
     },
     {
         "name": "Chile",
         "code": "CL",
+        "alpha3Code": "CHL",
+        "capital": "Santiago",
         "region": "Americas",
-        "capital": "Santiago"
+        "subregion": "South America",
+        "population": 19116201,
+        "languages": ["Spanish"],
+        "currency": "CLP",
+        "flag": "🇨🇱",
+        "callingCode": "+56"
     },
     {
         "name": "China",
         "code": "CN",
+        "alpha3Code": "CHN",
+        "capital": "Beijing",
         "region": "Asia",
-        "capital": "Beijing"
+        "subregion": "Eastern Asia",
+        "population": 1439323776,
+        "languages": ["Chinese"],
+        "currency": "CNY",
+        "flag": "🇨🇳",
+        "callingCode": "+86"
     },
     {
         "name": "Colombia",
         "code": "CO",
+        "alpha3Code": "COL",
+        "capital": "Bogotá",
         "region": "Americas",
-        "capital": "Bogotá"
+        "subregion": "South America",
+        "population": 50882891,
+        "languages": ["Spanish"],
+        "currency": "COP",
+        "flag": "🇨🇴",
+        "callingCode": "+57"
     },
     {
         "name": "Comoros",
         "code": "KM",
+        "alpha3Code": "COM",
+        "capital": "Moroni",
         "region": "Africa",
-        "capital": "Moroni"
+        "subregion": "Eastern Africa",
+        "population": 869601,
+        "languages": ["Arabic", "French"],
+        "currency": "KMF",
+        "flag": "🇰🇲",
+        "callingCode": "+269"
     },
     {
         "name": "Congo",
         "code": "CG",
+        "alpha3Code": "COG",
+        "capital": "Brazzaville",
         "region": "Africa",
-        "capital": "Brazzaville"
+        "subregion": "Middle Africa",
+        "population": 5518087,
+        "languages": ["French"],
+        "currency": "XAF",
+        "flag": "🇨🇬",
+        "callingCode": "+242"
     },
     {
         "name": "Costa Rica",
         "code": "CR",
+        "alpha3Code": "CRI",
+        "capital": "San José",
         "region": "Americas",
-        "capital": "San José"
+        "subregion": "Central America",
+        "population": 5094118,
+        "languages": ["Spanish"],
+        "currency": "CRC",
+        "flag": "🇨🇷",
+        "callingCode": "+506"
     },
     {
         "name": "Croatia",
         "code": "HR",
+        "alpha3Code": "HRV",
+        "capital": "Zagreb",
         "region": "Europe",
-        "capital": "Zagreb"
+        "subregion": "Southern Europe",
+        "population": 4105267,
+        "languages": ["Croatian"],
+        "currency": "EUR",
+        "flag": "🇭🇷",
+        "callingCode": "+385"
     },
     {
         "name": "Cuba",
         "code": "CU",
+        "alpha3Code": "CUB",
+        "capital": "Havana",
         "region": "Americas",
-        "capital": "Havana"
+        "subregion": "Caribbean",
+        "population": 11326616,
+        "languages": ["Spanish"],
+        "currency": "CUP",
+        "flag": "🇨🇺",
+        "callingCode": "+53"
     },
     {
         "name": "Cyprus",
         "code": "CY",
+        "alpha3Code": "CYP",
+        "capital": "Nicosia",
         "region": "Europe",
-        "capital": "Nicosia"
+        "subregion": "Southern Europe",
+        "population": 1207359,
+        "languages": ["Greek", "Turkish"],
+        "currency": "EUR",
+        "flag": "🇨🇾",
+        "callingCode": "+357"
     },
     {
         "name": "Czech Republic",
         "code": "CZ",
+        "alpha3Code": "CZE",
+        "capital": "Prague",
         "region": "Europe",
-        "capital": "Prague"
+        "subregion": "Central Europe",
+        "population": 10708981,
+        "languages": ["Czech"],
+        "currency": "CZK",
+        "flag": "🇨🇿",
+        "callingCode": "+420"
     },
     {
         "name": "Democratic Republic of the Congo",
         "code": "CD",
+        "alpha3Code": "COD",
+        "capital": "Kinshasa",
         "region": "Africa",
-        "capital": "Kinshasa"
+        "subregion": "Middle Africa",
+        "population": 89561403,
+        "languages": ["French"],
+        "currency": "CDF",
+        "flag": "🇨🇩",
+        "callingCode": "+243"
     },
     {
         "name": "Denmark",
         "code": "DK",
+        "alpha3Code": "DNK",
+        "capital": "Copenhagen",
         "region": "Europe",
-        "capital": "Copenhagen"
+        "subregion": "Northern Europe",
+        "population": 5792202,
+        "languages": ["Danish"],
+        "currency": "DKK",
+        "flag": "🇩🇰",
+        "callingCode": "+45"
     },
     {
         "name": "Djibouti",
         "code": "DJ",
+        "alpha3Code": "DJI",
+        "capital": "Djibouti",
         "region": "Africa",
-        "capital": "Djibouti"
+        "subregion": "Eastern Africa",
+        "population": 988000,
+        "languages": ["French", "Arabic"],
+        "currency": "DJF",
+        "flag": "🇩🇯",
+        "callingCode": "+253"
     },
     {
         "name": "Dominica",
         "code": "DM",
+        "alpha3Code": "DMA",
+        "capital": "Roseau",
         "region": "Americas",
-        "capital": "Roseau"
+        "subregion": "Caribbean",
+        "population": 71986,
+        "languages": ["English"],
+        "currency": "XCD",
+        "flag": "🇩🇲",
+        "callingCode": "+1767"
     },
     {
         "name": "Dominican Republic",
         "code": "DO",
+        "alpha3Code": "DOM",
+        "capital": "Santo Domingo",
         "region": "Americas",
-        "capital": "Santo Domingo"
+        "subregion": "Caribbean",
+        "population": 10847910,
+        "languages": ["Spanish"],
+        "currency": "DOP",
+        "flag": "🇩🇴",
+        "callingCode": "+1809"
     },
     {
         "name": "East Timor",
         "code": "TL",
+        "alpha3Code": "TLS",
+        "capital": "Dili",
         "region": "Asia",
-        "capital": "Dili"
+        "subregion": "South-Eastern Asia",
+        "population": 1318445,
+        "languages": ["Portuguese", "Tetum"],
+        "currency": "USD",
+        "flag": "🇹🇱",
+        "callingCode": "+670"
     },
     {
         "name": "Ecuador",
         "code": "EC",
+        "alpha3Code": "ECU",
+        "capital": "Quito",
         "region": "Americas",
-        "capital": "Quito"
+        "subregion": "South America",
+        "population": 17643054,
+        "languages": ["Spanish"],
+        "currency": "USD",
+        "flag": "🇪🇨",
+        "callingCode": "+593"
     },
     {
         "name": "Egypt",
         "code": "EG",
+        "alpha3Code": "EGY",
+        "capital": "Cairo",
         "region": "Africa",
-        "capital": "Cairo"
+        "subregion": "Northern Africa",
+        "population": 102334404,
+        "languages": ["Arabic"],
+        "currency": "EGP",
+        "flag": "🇪🇬",
+        "callingCode": "+20"
     },
     {
         "name": "El Salvador",
         "code": "SV",
+        "alpha3Code": "SLV",
+        "capital": "San Salvador",
         "region": "Americas",
-        "capital": "San Salvador"
+        "subregion": "Central America",
+        "population": 6486205,
+        "languages": ["Spanish"],
+        "currency": "USD",
+        "flag": "🇸🇻",
+        "callingCode": "+503"
     },
     {
         "name": "Equatorial Guinea",
         "code": "GQ",
+        "alpha3Code": "GNQ",
+        "capital": "Malabo",
         "region": "Africa",
-        "capital": "Malabo"
+        "subregion": "Middle Africa",
+        "population": 1402985,
+        "languages": ["Spanish", "French"],
+        "currency": "XAF",
+        "flag": "🇬🇶",
+        "callingCode": "+240"
     },
     {
         "name": "Eritrea",
         "code": "ER",
+        "alpha3Code": "ERI",
+        "capital": "Asmara",
         "region": "Africa",
-        "capital": "Asmara"
+        "subregion": "Eastern Africa",
+        "population": 3546421,
+        "languages": ["Tigrinya", "Arabic"],
+        "currency": "ERN",
+        "flag": "🇪🇷",
+        "callingCode": "+291"
     },
     {
         "name": "Estonia",
         "code": "EE",
+        "alpha3Code": "EST",
+        "capital": "Tallinn",
         "region": "Europe",
-        "capital": "Tallinn"
+        "subregion": "Northern Europe",
+        "population": 1326535,
+        "languages": ["Estonian"],
+        "currency": "EUR",
+        "flag": "🇪🇪",
+        "callingCode": "+372"
     },
     {
         "name": "Eswatini",
         "code": "SZ",
+        "alpha3Code": "SWZ",
+        "capital": "Mbabane",
         "region": "Africa",
-        "capital": "Mbabane"
+        "subregion": "Southern Africa",
+        "population": 1160164,
+        "languages": ["English", "Swati"],
+        "currency": "SZL",
+        "flag": "🇸🇿",
+        "callingCode": "+268"
     },
     {
         "name": "Ethiopia",
         "code": "ET",
+        "alpha3Code": "ETH",
+        "capital": "Addis Ababa",
         "region": "Africa",
-        "capital": "Addis Ababa"
+        "subregion": "Eastern Africa",
+        "population": 114963588,
+        "languages": ["Amharic"],
+        "currency": "ETB",
+        "flag": "🇪🇹",
+        "callingCode": "+251"
     },
     {
         "name": "Fiji",
         "code": "FJ",
+        "alpha3Code": "FJI",
+        "capital": "Suva",
         "region": "Oceania",
-        "capital": "Suva"
+        "subregion": "Melanesia",
+        "population": 896445,
+        "languages": ["English", "Fijian"],
+        "currency": "FJD",
+        "flag": "🇫🇯",
+        "callingCode": "+679"
     },
     {
         "name": "Finland",
         "code": "FI",
+        "alpha3Code": "FIN",
+        "capital": "Helsinki",
         "region": "Europe",
-        "capital": "Helsinki"
+        "subregion": "Northern Europe",
+        "population": 5540720,
+        "languages": ["Finnish", "Swedish"],
+        "currency": "EUR",
+        "flag": "🇫🇮",
+        "callingCode": "+358"
     },
     {
         "name": "France",
         "code": "FR",
+        "alpha3Code": "FRA",
+        "capital": "Paris",
         "region": "Europe",
-        "capital": "Paris"
+        "subregion": "Western Europe",
+        "population": 65273511,
+        "languages": ["French"],
+        "currency": "EUR",
+        "flag": "🇫🇷",
+        "callingCode": "+33"
     },
     {
         "name": "Gabon",
         "code": "GA",
+        "alpha3Code": "GAB",
+        "capital": "Libreville",
         "region": "Africa",
-        "capital": "Libreville"
+        "subregion": "Middle Africa",
+        "population": 2225734,
+        "languages": ["French"],
+        "currency": "XAF",
+        "flag": "🇬🇦",
+        "callingCode": "+241"
     },
     {
         "name": "Gambia",
         "code": "GM",
+        "alpha3Code": "GMB",
+        "capital": "Banjul",
         "region": "Africa",
-        "capital": "Banjul"
+        "subregion": "Western Africa",
+        "population": 2416668,
+        "languages": ["English"],
+        "currency": "GMD",
+        "flag": "🇬🇲",
+        "callingCode": "+220"
     },
     {
         "name": "Georgia",
         "code": "GE",
+        "alpha3Code": "GEO",
+        "capital": "Tbilisi",
         "region": "Asia",
-        "capital": "Tbilisi"
+        "subregion": "Western Asia",
+        "population": 3989167,
+        "languages": ["Georgian"],
+        "currency": "GEL",
+        "flag": "🇬🇪",
+        "callingCode": "+995"
     },
     {
         "name": "Germany",
         "code": "DE",
+        "alpha3Code": "DEU",
+        "capital": "Berlin",
         "region": "Europe",
-        "capital": "Berlin"
+        "subregion": "Western Europe",
+        "population": 83783942,
+        "languages": ["German"],
+        "currency": "EUR",
+        "flag": "🇩🇪",
+        "callingCode": "+49"
     },
     {
         "name": "Ghana",
         "code": "GH",
+        "alpha3Code": "GHA",
+        "capital": "Accra",
         "region": "Africa",
-        "capital": "Accra"
+        "subregion": "Western Africa",
+        "population": 31072940,
+        "languages": ["English"],
+        "currency": "GHS",
+        "flag": "🇬🇭",
+        "callingCode": "+233"
     },
     {
         "name": "Greece",
         "code": "GR",
+        "alpha3Code": "GRC",
+        "capital": "Athens",
         "region": "Europe",
-        "capital": "Athens"
+        "subregion": "Southern Europe",
+        "population": 10423054,
+        "languages": ["Greek"],
+        "currency": "EUR",
+        "flag": "🇬🇷",
+        "callingCode": "+30"
     },
     {
         "name": "Grenada",
         "code": "GD",
+        "alpha3Code": "GRD",
+        "capital": "St. George's",
         "region": "Americas",
-        "capital": "St. George's"
+        "subregion": "Caribbean",
+        "population": 112523,
+        "languages": ["English"],
+        "currency": "XCD",
+        "flag": "🇬🇩",
+        "callingCode": "+1473"
     },
     {
         "name": "Guatemala",
         "code": "GT",
+        "alpha3Code": "GTM",
+        "capital": "Guatemala City",
         "region": "Americas",
-        "capital": "Guatemala City"
+        "subregion": "Central America",
+        "population": 17915568,
+        "languages": ["Spanish"],
+        "currency": "GTQ",
+        "flag": "🇬🇹",
+        "callingCode": "+502"
     },
     {
         "name": "Guinea",
         "code": "GN",
+        "alpha3Code": "GIN",
+        "capital": "Conakry",
         "region": "Africa",
-        "capital": "Conakry"
+        "subregion": "Western Africa",
+        "population": 13132795,
+        "languages": ["French"],
+        "currency": "GNF",
+        "flag": "🇬🇳",
+        "callingCode": "+224"
     },
     {
         "name": "Guinea-Bissau",
         "code": "GW",
+        "alpha3Code": "GNB",
+        "capital": "Bissau",
         "region": "Africa",
-        "capital": "Bissau"
+        "subregion": "Western Africa",
+        "population": 1968001,
+        "languages": ["Portuguese"],
+        "currency": "XOF",
+        "flag": "🇬🇼",
+        "callingCode": "+245"
     },
     {
         "name": "Guyana",
         "code": "GY",
+        "alpha3Code": "GUY",
+        "capital": "Georgetown",
         "region": "Americas",
-        "capital": "Georgetown"
+        "subregion": "South America",
+        "population": 786552,
+        "languages": ["English"],
+        "currency": "GYD",
+        "flag": "🇬🇾",
+        "callingCode": "+592"
     },
     {
         "name": "Haiti",
         "code": "HT",
+        "alpha3Code": "HTI",
+        "capital": "Port-au-Prince",
         "region": "Americas",
-        "capital": "Port-au-Prince"
+        "subregion": "Caribbean",
+        "population": 11402528,
+        "languages": ["French", "Haitian Creole"],
+        "currency": "HTG",
+        "flag": "🇭🇹",
+        "callingCode": "+509"
     },
     {
         "name": "Honduras",
         "code": "HN",
+        "alpha3Code": "HND",
+        "capital": "Tegucigalpa",
         "region": "Americas",
-        "capital": "Tegucigalpa"
+        "subregion": "Central America",
+        "population": 9904607,
+        "languages": ["Spanish"],
+        "currency": "HNL",
+        "flag": "🇭🇳",
+        "callingCode": "+504"
     },
     {
         "name": "Hungary",
         "code": "HU",
+        "alpha3Code": "HUN",
+        "capital": "Budapest",
         "region": "Europe",
-        "capital": "Budapest"
+        "subregion": "Central Europe",
+        "population": 9660351,
+        "languages": ["Hungarian"],
+        "currency": "HUF",
+        "flag": "🇭🇺",
+        "callingCode": "+36"
     },
     {
         "name": "Iceland",
         "code": "IS",
+        "alpha3Code": "ISL",
+        "capital": "Reykjavik",
         "region": "Europe",
-        "capital": "Reykjavik"
+        "subregion": "Northern Europe",
+        "population": 341243,
+        "languages": ["Icelandic"],
+        "currency": "ISK",
+        "flag": "🇮🇸",
+        "callingCode": "+354"
     },
     {
         "name": "India",
         "code": "IN",
+        "alpha3Code": "IND",
+        "capital": "New Delhi",
         "region": "Asia",
-        "capital": "New Delhi"
+        "subregion": "Southern Asia",
+        "population": 1380004385,
+        "languages": ["Hindi", "English"],
+        "currency": "INR",
+        "flag": "🇮🇳",
+        "callingCode": "+91"
     },
     {
         "name": "Indonesia",
         "code": "ID",
+        "alpha3Code": "IDN",
+        "capital": "Jakarta",
         "region": "Asia",
-        "capital": "Jakarta"
+        "subregion": "South-Eastern Asia",
+        "population": 273523615,
+        "languages": ["Indonesian"],
+        "currency": "IDR",
+        "flag": "🇮🇩",
+        "callingCode": "+62"
     },
     {
         "name": "Iran",
         "code": "IR",
+        "alpha3Code": "IRN",
+        "capital": "Tehran",
         "region": "Asia",
-        "capital": "Tehran"
+        "subregion": "Southern Asia",
+        "population": 83992949,
+        "languages": ["Persian"],
+        "currency": "IRR",
+        "flag": "🇮🇷",
+        "callingCode": "+98"
     },
     {
         "name": "Iraq",
         "code": "IQ",
+        "alpha3Code": "IRQ",
+        "capital": "Baghdad",
         "region": "Asia",
-        "capital": "Baghdad"
+        "subregion": "Western Asia",
+        "population": 40222493,
+        "languages": ["Arabic", "Kurdish"],
+        "currency": "IQD",
+        "flag": "🇮🇶",
+        "callingCode": "+964"
     },
     {
         "name": "Ireland",
         "code": "IE",
+        "alpha3Code": "IRL",
+        "capital": "Dublin",
         "region": "Europe",
-        "capital": "Dublin"
+        "subregion": "Northern Europe",
+        "population": 4937786,
+        "languages": ["Irish", "English"],
+        "currency": "EUR",
+        "flag": "🇮🇪",
+        "callingCode": "+353"
     },
     {
         "name": "Israel",
         "code": "IL",
+        "alpha3Code": "ISR",
+        "capital": "Jerusalem",
         "region": "Asia",
-        "capital": "Jerusalem"
+        "subregion": "Western Asia",
+        "population": 8655535,
+        "languages": ["Hebrew", "Arabic"],
+        "currency": "ILS",
+        "flag": "🇮🇱",
+        "callingCode": "+972"
     },
     {
         "name": "Italy",
         "code": "IT",
+        "alpha3Code": "ITA",
+        "capital": "Rome",
         "region": "Europe",
-        "capital": "Rome"
+        "subregion": "Southern Europe",
+        "population": 60461826,
+        "languages": ["Italian"],
+        "currency": "EUR",
+        "flag": "🇮🇹",
+        "callingCode": "+39"
     },
     {
         "name": "Ivory Coast",
         "code": "CI",
+        "alpha3Code": "CIV",
+        "capital": "Yamoussoukro",
         "region": "Africa",
-        "capital": "Yamoussoukro"
+        "subregion": "Western Africa",
+        "population": 26378274,
+        "languages": ["French"],
+        "currency": "XOF",
+        "flag": "🇨🇮",
+        "callingCode": "+225"
     },
     {
         "name": "Jamaica",
         "code": "JM",
+        "alpha3Code": "JAM",
+        "capital": "Kingston",
         "region": "Americas",
-        "capital": "Kingston"
+        "subregion": "Caribbean",
+        "population": 2961167,
+        "languages": ["English"],
+        "currency": "JMD",
+        "flag": "🇯🇲",
+        "callingCode": "+1876"
     },
     {
         "name": "Japan",
         "code": "JP",
+        "alpha3Code": "JPN",
+        "capital": "Tokyo",
         "region": "Asia",
-        "capital": "Tokyo"
+        "subregion": "Eastern Asia",
+        "population": 126476461,
+        "languages": ["Japanese"],
+        "currency": "JPY",
+        "flag": "🇯🇵",
+        "callingCode": "+81"
     },
     {
         "name": "Jordan",
         "code": "JO",
+        "alpha3Code": "JOR",
+        "capital": "Amman",
         "region": "Asia",
-        "capital": "Amman"
+        "subregion": "Western Asia",
+        "population": 10203134,
+        "languages": ["Arabic"],
+        "currency": "JOD",
+        "flag": "🇯🇴",
+        "callingCode": "+962"
     },
     {
         "name": "Kazakhstan",
         "code": "KZ",
+        "alpha3Code": "KAZ",
+        "capital": "Nur-Sultan",
         "region": "Asia",
-        "capital": "Nur-Sultan"
+        "subregion": "Central Asia",
+        "population": 18776707,
+        "languages": ["Kazakh", "Russian"],
+        "currency": "KZT",
+        "flag": "🇰🇿",
+        "callingCode": "+7"
     },
     {
         "name": "Kenya",
         "code": "KE",
+        "alpha3Code": "KEN",
+        "capital": "Nairobi",
         "region": "Africa",
-        "capital": "Nairobi"
+        "subregion": "Eastern Africa",
+        "population": 53771296,
+        "languages": ["English", "Swahili"],
+        "currency": "KES",
+        "flag": "🇰🇪",
+        "callingCode": "+254"
     },
     {
         "name": "Kiribati",
         "code": "KI",
+        "alpha3Code": "KIR",
+        "capital": "Tarawa",
         "region": "Oceania",
-        "capital": "Tarawa"
+        "subregion": "Micronesia",
+        "population": 119449,
+        "languages": ["English"],
+        "currency": "AUD",
+        "flag": "🇰🇮",
+        "callingCode": "+686"
     },
     {
         "name": "Kosovo",
         "code": "XK",
+        "alpha3Code": "XKX",
+        "capital": "Pristina",
         "region": "Europe",
-        "capital": "Pristina"
+        "subregion": "Southern Europe",
+        "population": 1810366,
+        "languages": ["Albanian", "Serbian"],
+        "currency": "EUR",
+        "flag": "🇽🇰",
+        "callingCode": "+383"
     },
     {
         "name": "Kuwait",
         "code": "KW",
+        "alpha3Code": "KWT",
+        "capital": "Kuwait City",
         "region": "Asia",
-        "capital": "Kuwait City"
+        "subregion": "Western Asia",
+        "population": 4270571,
+        "languages": ["Arabic"],
+        "currency": "KWD",
+        "flag": "🇰🇼",
+        "callingCode": "+965"
     },
     {
         "name": "Kyrgyzstan",
         "code": "KG",
+        "alpha3Code": "KGZ",
+        "capital": "Bishkek",
         "region": "Asia",
-        "capital": "Bishkek"
+        "subregion": "Central Asia",
+        "population": 6524195,
+        "languages": ["Kyrgyz", "Russian"],
+        "currency": "KGS",
+        "flag": "🇰🇬",
+        "callingCode": "+996"
     },
     {
         "name": "Laos",
         "code": "LA",
+        "alpha3Code": "LAO",
+        "capital": "Vientiane",
         "region": "Asia",
-        "capital": "Vientiane"
+        "subregion": "South-Eastern Asia",
+        "population": 7275560,
+        "languages": ["Lao"],
+        "currency": "LAK",
+        "flag": "🇱🇦",
+        "callingCode": "+856"
     },
     {
         "name": "Latvia",
         "code": "LV",
+        "alpha3Code": "LVA",
+        "capital": "Riga",
         "region": "Europe",
-        "capital": "Riga"
+        "subregion": "Northern Europe",
+        "population": 1886198,
+        "languages": ["Latvian"],
+        "currency": "EUR",
+        "flag": "🇱🇻",
+        "callingCode": "+371"
     },
     {
         "name": "Lebanon",
         "code": "LB",
+        "alpha3Code": "LBN",
+        "capital": "Beirut",
         "region": "Asia",
-        "capital": "Beirut"
+        "subregion": "Western Asia",
+        "population": 6825445,
+        "languages": ["Arabic", "French"],
+        "currency": "LBP",
+        "flag": "🇱🇧",
+        "callingCode": "+961"
     },
     {
         "name": "Lesotho",
         "code": "LS",
+        "alpha3Code": "LSO",
+        "capital": "Maseru",
         "region": "Africa",
-        "capital": "Maseru"
+        "subregion": "Southern Africa",
+        "population": 2142249,
+        "languages": ["English", "Sesotho"],
+        "currency": "LSL",
+        "flag": "🇱🇸",
+        "callingCode": "+266"
     },
     {
         "name": "Liberia",
         "code": "LR",
+        "alpha3Code": "LBR",
+        "capital": "Monrovia",
         "region": "Africa",
-        "capital": "Monrovia"
+        "subregion": "Western Africa",
+        "population": 5057681,
+        "languages": ["English"],
+        "currency": "LRD",
+        "flag": "🇱🇷",
+        "callingCode": "+231"
     },
     {
         "name": "Libya",
         "code": "LY",
+        "alpha3Code": "LBY",
+        "capital": "Tripoli",
         "region": "Africa",
-        "capital": "Tripoli"
+        "subregion": "Northern Africa",
+        "population": 6871292,
+        "languages": ["Arabic"],
+        "currency": "LYD",
+        "flag": "🇱🇾",
+        "callingCode": "+218"
     },
     {
         "name": "Liechtenstein",
         "code": "LI",
+        "alpha3Code": "LIE",
+        "capital": "Vaduz",
         "region": "Europe",
-        "capital": "Vaduz"
+        "subregion": "Central Europe",
+        "population": 38128,
+        "languages": ["German"],
+        "currency": "CHF",
+        "flag": "🇱🇮",
+        "callingCode": "+423"
     },
     {
         "name": "Lithuania",
         "code": "LT",
+        "alpha3Code": "LTU",
+        "capital": "Vilnius",
         "region": "Europe",
-        "capital": "Vilnius"
+        "subregion": "Northern Europe",
+        "population": 2722289,
+        "languages": ["Lithuanian"],
+        "currency": "EUR",
+        "flag": "🇱🇹",
+        "callingCode": "+370"
     },
     {
         "name": "Luxembourg",
         "code": "LU",
+        "alpha3Code": "LUX",
+        "capital": "Luxembourg",
         "region": "Europe",
-        "capital": "Luxembourg"
+        "subregion": "Western Europe",
+        "population": 625978,
+        "languages": ["French", "German", "Luxembourgish"],
+        "currency": "EUR",
+        "flag": "🇱🇺",
+        "callingCode": "+352"
     },
     {
         "name": "Madagascar",
         "code": "MG",
+        "alpha3Code": "MDG",
+        "capital": "Antananarivo",
         "region": "Africa",
-        "capital": "Antananarivo"
+        "subregion": "Eastern Africa",
+        "population": 27691018,
+        "languages": ["French", "Malagasy"],
+        "currency": "MGA",
+        "flag": "🇲🇬",
+        "callingCode": "+261"
     },
     {
         "name": "Malawi",
         "code": "MW",
+        "alpha3Code": "MWI",
+        "capital": "Lilongwe",
         "region": "Africa",
-        "capital": "Lilongwe"
+        "subregion": "Eastern Africa",
+        "population": 19129952,
+        "languages": ["English", "Chichewa"],
+        "currency": "MWK",
+        "flag": "🇲🇼",
+        "callingCode": "+265"
     },
     {
         "name": "Malaysia",
         "code": "MY",
+        "alpha3Code": "MYS",
+        "capital": "Kuala Lumpur",
         "region": "Asia",
-        "capital": "Kuala Lumpur"
+        "subregion": "South-Eastern Asia",
+        "population": 32365999,
+        "languages": ["Malay"],
+        "currency": "MYR",
+        "flag": "🇲🇾",
+        "callingCode": "+60"
     },
     {
         "name": "Maldives",
         "code": "MV",
+        "alpha3Code": "MDV",
+        "capital": "Malé",
         "region": "Asia",
-        "capital": "Malé"
+        "subregion": "Southern Asia",
+        "population": 540544,
+        "languages": ["Dhivehi"],
+        "currency": "MVR",
+        "flag": "🇲🇻",
+        "callingCode": "+960"
     },
     {
         "name": "Mali",
         "code": "ML",
+        "alpha3Code": "MLI",
+        "capital": "Bamako",
         "region": "Africa",
-        "capital": "Bamako"
+        "subregion": "Western Africa",
+        "population": 20250833,
+        "languages": ["French"],
+        "currency": "XOF",
+        "flag": "🇲🇱",
+        "callingCode": "+223"
     },
     {
         "name": "Malta",
         "code": "MT",
+        "alpha3Code": "MLT",
+        "capital": "Valletta",
         "region": "Europe",
-        "capital": "Valletta"
+        "subregion": "Southern Europe",
+        "population": 441543,
+        "languages": ["Maltese", "English"],
+        "currency": "EUR",
+        "flag": "🇲🇹",
+        "callingCode": "+356"
     },
     {
         "name": "Marshall Islands",
         "code": "MH",
+        "alpha3Code": "MHL",
+        "capital": "Majuro",
         "region": "Oceania",
-        "capital": "Majuro"
+        "subregion": "Micronesia",
+        "population": 59190,
+        "languages": ["English", "Marshallese"],
+        "currency": "USD",
+        "flag": "🇲🇭",
+        "callingCode": "+692"
     },
     {
         "name": "Mauritania",
         "code": "MR",
+        "alpha3Code": "MRT",
+        "capital": "Nouakchott",
         "region": "Africa",
-        "capital": "Nouakchott"
+        "subregion": "Western Africa",
+        "population": 4649658,
+        "languages": ["Arabic"],
+        "currency": "MRU",
+        "flag": "🇲🇷",
+        "callingCode": "+222"
     },
     {
         "name": "Mauritius",
         "code": "MU",
+        "alpha3Code": "MUS",
+        "capital": "Port Louis",
         "region": "Africa",
-        "capital": "Port Louis"
+        "subregion": "Eastern Africa",
+        "population": 1271768,
+        "languages": ["English", "French"],
+        "currency": "MUR",
+        "flag": "🇲🇺",
+        "callingCode": "+230"
     },
     {
         "name": "Mexico",
         "code": "MX",
+        "alpha3Code": "MEX",
+        "capital": "Mexico City",
         "region": "Americas",
-        "capital": "Mexico City"
+        "subregion": "Central America",
+        "population": 128932753,
+        "languages": ["Spanish"],
+        "currency": "MXN",
+        "flag": "🇲🇽",
+        "callingCode": "+52"
     },
     {
         "name": "Micronesia",
         "code": "FM",
+        "alpha3Code": "FSM",
+        "capital": "Palikir",
         "region": "Oceania",
-        "capital": "Palikir"
+        "subregion": "Micronesia",
+        "population": 115023,
+        "languages": ["English"],
+        "currency": "USD",
+        "flag": "🇫🇲",
+        "callingCode": "+691"
     },
     {
         "name": "Moldova",
         "code": "MD",
+        "alpha3Code": "MDA",
+        "capital": "Chișinău",
         "region": "Europe",
-        "capital": "Chișinău"
+        "subregion": "Eastern Europe",
+        "population": 4033963,
+        "languages": ["Romanian"],
+        "currency": "MDL",
+        "flag": "🇲🇩",
+        "callingCode": "+373"
     },
     {
         "name": "Monaco",
         "code": "MC",
+        "alpha3Code": "MCO",
+        "capital": "Monaco",
         "region": "Europe",
-        "capital": "Monaco"
+        "subregion": "Western Europe",
+        "population": 39242,
+        "languages": ["French"],
+        "currency": "EUR",
+        "flag": "🇲🇨",
+        "callingCode": "+377"
     },
     {
         "name": "Mongolia",
         "code": "MN",
+        "alpha3Code": "MNG",
+        "capital": "Ulaanbaatar",
         "region": "Asia",
-        "capital": "Ulaanbaatar"
+        "subregion": "Eastern Asia",
+        "population": 3278290,
+        "languages": ["Mongolian"],
+        "currency": "MNT",
+        "flag": "🇲🇳",
+        "callingCode": "+976"
     },
     {
         "name": "Montenegro",
         "code": "ME",
+        "alpha3Code": "MNE",
+        "capital": "Podgorica",
         "region": "Europe",
-        "capital": "Podgorica"
+        "subregion": "Southern Europe",
+        "population": 628066,
+        "languages": ["Montenegrin"],
+        "currency": "EUR",
+        "flag": "🇲🇪",
+        "callingCode": "+382"
     },
     {
         "name": "Morocco",
         "code": "MA",
+        "alpha3Code": "MAR",
+        "capital": "Rabat",
         "region": "Africa",
-        "capital": "Rabat"
+        "subregion": "Northern Africa",
+        "population": 36910560,
+        "languages": ["Arabic"],
+        "currency": "MAD",
+        "flag": "🇲🇦",
+        "callingCode": "+212"
     },
     {
         "name": "Mozambique",
         "code": "MZ",
+        "alpha3Code": "MOZ",
+        "capital": "Maputo",
         "region": "Africa",
-        "capital": "Maputo"
+        "subregion": "Eastern Africa",
+        "population": 31255435,
+        "languages": ["Portuguese"],
+        "currency": "MZN",
+        "flag": "🇲🇿",
+        "callingCode": "+258"
     },
     {
         "name": "Myanmar",
         "code": "MM",
+        "alpha3Code": "MMR",
+        "capital": "Naypyidaw",
         "region": "Asia",
-        "capital": "Naypyidaw"
+        "subregion": "South-Eastern Asia",
+        "population": 54409800,
+        "languages": ["Burmese"],
+        "currency": "MMK",
+        "flag": "🇲🇲",
+        "callingCode": "+95"
     },
     {
         "name": "Namibia",
         "code": "NA",
+        "alpha3Code": "NAM",
+        "capital": "Windhoek",
         "region": "Africa",
-        "capital": "Windhoek"
+        "subregion": "Southern Africa",
+        "population": 2540905,
+        "languages": ["English"],
+        "currency": "NAD",
+        "flag": "🇳🇦",
+        "callingCode": "+264"
     },
     {
         "name": "Nauru",
         "code": "NR",
+        "alpha3Code": "NRU",
+        "capital": "Yaren",
         "region": "Oceania",
-        "capital": "Yaren"
+        "subregion": "Micronesia",
+        "population": 10824,
+        "languages": ["English", "Nauruan"],
+        "currency": "AUD",
+        "flag": "🇳🇷",
+        "callingCode": "+674"
     },
     {
         "name": "Nepal",
         "code": "NP",
+        "alpha3Code": "NPL",
+        "capital": "Kathmandu",
         "region": "Asia",
-        "capital": "Kathmandu"
+        "subregion": "Southern Asia",
+        "population": 29136808,
+        "languages": ["Nepali"],
+        "currency": "NPR",
+        "flag": "🇳🇵",
+        "callingCode": "+977"
     },
     {
         "name": "Netherlands",
         "code": "NL",
+        "alpha3Code": "NLD",
+        "capital": "Amsterdam",
         "region": "Europe",
-        "capital": "Amsterdam"
+        "subregion": "Western Europe",
+        "population": 17134872,
+        "languages": ["Dutch"],
+        "currency": "EUR",
+        "flag": "🇳🇱",
+        "callingCode": "+31"
     },
     {
         "name": "New Zealand",
         "code": "NZ",
+        "alpha3Code": "NZL",
+        "capital": "Wellington",
         "region": "Oceania",
-        "capital": "Wellington"
+        "subregion": "Australia and New Zealand",
+        "population": 4822233,
+        "languages": ["English", "Māori"],
+        "currency": "NZD",
+        "flag": "🇳🇿",
+        "callingCode": "+64"
     },
     {
         "name": "Nicaragua",
         "code": "NI",
+        "alpha3Code": "NIC",
+        "capital": "Managua",
         "region": "Americas",
-        "capital": "Managua"
+        "subregion": "Central America",
+        "population": 6624554,
+        "languages": ["Spanish"],
+        "currency": "NIO",
+        "flag": "🇳🇮",
+        "callingCode": "+505"
     },
     {
         "name": "Niger",
         "code": "NE",
+        "alpha3Code": "NER",
+        "capital": "Niamey",
         "region": "Africa",
-        "capital": "Niamey"
+        "subregion": "Western Africa",
+        "population": 24206644,
+        "languages": ["French"],
+        "currency": "XOF",
+        "flag": "🇳🇪",
+        "callingCode": "+227"
     },
     {
         "name": "Nigeria",
         "code": "NG",
+        "alpha3Code": "NGA",
+        "capital": "Abuja",
         "region": "Africa",
-        "capital": "Abuja"
+        "subregion": "Western Africa",
+        "population": 206139589,
+        "languages": ["English"],
+        "currency": "NGN",
+        "flag": "🇳🇬",
+        "callingCode": "+234"
     },
     {
         "name": "North Korea",
         "code": "KP",
+        "alpha3Code": "PRK",
+        "capital": "Pyongyang",
         "region": "Asia",
-        "capital": "Pyongyang"
+        "subregion": "Eastern Asia",
+        "population": 25778816,
+        "languages": ["Korean"],
+        "currency": "KPW",
+        "flag": "🇰🇵",
+        "callingCode": "+850"
     },
     {
         "name": "North Macedonia",
         "code": "MK",
+        "alpha3Code": "MKD",
+        "capital": "Skopje",
         "region": "Europe",
-        "capital": "Skopje"
+        "subregion": "Southern Europe",
+        "population": 2083374,
+        "languages": ["Macedonian"],
+        "currency": "MKD",
+        "flag": "🇲🇰",
+        "callingCode": "+389"
     },
     {
         "name": "Norway",
         "code": "NO",
+        "alpha3Code": "NOR",
+        "capital": "Oslo",
         "region": "Europe",
-        "capital": "Oslo"
+        "subregion": "Northern Europe",
+        "population": 5421241,
+        "languages": ["Norwegian"],
+        "currency": "NOK",
+        "flag": "🇳🇴",
+        "callingCode": "+47"
     },
     {
         "name": "Oman",
         "code": "OM",
+        "alpha3Code": "OMN",
+        "capital": "Muscat",
         "region": "Asia",
-        "capital": "Muscat"
+        "subregion": "Western Asia",
+        "population": 5106626,
+        "languages": ["Arabic"],
+        "currency": "OMR",
+        "flag": "🇴🇲",
+        "callingCode": "+968"
     },
     {
         "name": "Pakistan",
         "code": "PK",
+        "alpha3Code": "PAK",
+        "capital": "Islamabad",
         "region": "Asia",
-        "capital": "Islamabad"
+        "subregion": "Southern Asia",
+        "population": 220892340,
+        "languages": ["Urdu", "English"],
+        "currency": "PKR",
+        "flag": "🇵🇰",
+        "callingCode": "+92"
     },
     {
         "name": "Palau",
         "code": "PW",
+        "alpha3Code": "PLW",
+        "capital": "Ngerulmud",
         "region": "Oceania",
-        "capital": "Ngerulmud"
+        "subregion": "Micronesia",
+        "population": 18094,
+        "languages": ["English", "Palauan"],
+        "currency": "USD",
+        "flag": "🇵🇼",
+        "callingCode": "+680"
     },
     {
         "name": "Palestine",
         "code": "PS",
+        "alpha3Code": "PSE",
+        "capital": "Ramallah",
         "region": "Asia",
-        "capital": "Ramallah"
+        "subregion": "Western Asia",
+        "population": 5101414,
+        "languages": ["Arabic"],
+        "currency": "ILS",
+        "flag": "🇵🇸",
+        "callingCode": "+970"
     },
     {
         "name": "Panama",
         "code": "PA",
+        "alpha3Code": "PAN",
+        "capital": "Panama City",
         "region": "Americas",
-        "capital": "Panama City"
+        "subregion": "Central America",
+        "population": 4314767,
+        "languages": ["Spanish"],
+        "currency": "PAB",
+        "flag": "🇵🇦",
+        "callingCode": "+507"
     },
     {
         "name": "Papua New Guinea",
         "code": "PG",
+        "alpha3Code": "PNG",
+        "capital": "Port Moresby",
         "region": "Oceania",
-        "capital": "Port Moresby"
+        "subregion": "Melanesia",
+        "population": 8947024,
+        "languages": ["English"],
+        "currency": "PGK",
+        "flag": "🇵🇬",
+        "callingCode": "+675"
     },
     {
         "name": "Paraguay",
         "code": "PY",
+        "alpha3Code": "PRY",
+        "capital": "Asunción",
         "region": "Americas",
-        "capital": "Asunción"
+        "subregion": "South America",
+        "population": 7132538,
+        "languages": ["Spanish", "Guaraní"],
+        "currency": "PYG",
+        "flag": "🇵🇾",
+        "callingCode": "+595"
     },
     {
         "name": "Peru",
         "code": "PE",
+        "alpha3Code": "PER",
+        "capital": "Lima",
         "region": "Americas",
-        "capital": "Lima"
+        "subregion": "South America",
+        "population": 32971854,
+        "languages": ["Spanish"],
+        "currency": "PEN",
+        "flag": "🇵🇪",
+        "callingCode": "+51"
     },
     {
         "name": "Philippines",
         "code": "PH",
+        "alpha3Code": "PHL",
+        "capital": "Manila",
         "region": "Asia",
-        "capital": "Manila"
+        "subregion": "South-Eastern Asia",
+        "population": 109581078,
+        "languages": ["Filipino", "English"],
+        "currency": "PHP",
+        "flag": "🇵🇭",
+        "callingCode": "+63"
     },
     {
         "name": "Poland",
         "code": "PL",
+        "alpha3Code": "POL",
+        "capital": "Warsaw",
         "region": "Europe",
-        "capital": "Warsaw"
+        "subregion": "Central Europe",
+        "population": 37846611,
+        "languages": ["Polish"],
+        "currency": "PLN",
+        "flag": "🇵🇱",
+        "callingCode": "+48"
     },
     {
         "name": "Portugal",
         "code": "PT",
+        "alpha3Code": "PRT",
+        "capital": "Lisbon",
         "region": "Europe",
-        "capital": "Lisbon"
+        "subregion": "Southern Europe",
+        "population": 10196709,
+        "languages": ["Portuguese"],
+        "currency": "EUR",
+        "flag": "🇵🇹",
+        "callingCode": "+351"
     },
     {
         "name": "Qatar",
         "code": "QA",
+        "alpha3Code": "QAT",
+        "capital": "Doha",
         "region": "Asia",
-        "capital": "Doha"
+        "subregion": "Western Asia",
+        "population": 2881053,
+        "languages": ["Arabic"],
+        "currency": "QAR",
+        "flag": "🇶🇦",
+        "callingCode": "+974"
     },
     {
         "name": "Romania",
         "code": "RO",
+        "alpha3Code": "ROU",
+        "capital": "Bucharest",
         "region": "Europe",
-        "capital": "Bucharest"
+        "subregion": "Eastern Europe",
+        "population": 19237691,
+        "languages": ["Romanian"],
+        "currency": "RON",
+        "flag": "🇷🇴",
+        "callingCode": "+40"
     },
     {
         "name": "Russia",
         "code": "RU",
+        "alpha3Code": "RUS",
+        "capital": "Moscow",
         "region": "Europe",
-        "capital": "Moscow"
+        "subregion": "Eastern Europe",
+        "population": 145934462,
+        "languages": ["Russian"],
+        "currency": "RUB",
+        "flag": "🇷🇺",
+        "callingCode": "+7"
     },
     {
         "name": "Rwanda",
         "code": "RW",
+        "alpha3Code": "RWA",
+        "capital": "Kigali",
         "region": "Africa",
-        "capital": "Kigali"
+        "subregion": "Eastern Africa",
+        "population": 12952218,
+        "languages": ["Kinyarwanda", "English", "French"],
+        "currency": "RWF",
+        "flag": "🇷🇼",
+        "callingCode": "+250"
     },
     {
         "name": "Saint Kitts and Nevis",
         "code": "KN",
+        "alpha3Code": "KNA",
+        "capital": "Basseterre",
         "region": "Americas",
-        "capital": "Basseterre"
+        "subregion": "Caribbean",
+        "population": 53199,
+        "languages": ["English"],
+        "currency": "XCD",
+        "flag": "🇰🇳",
+        "callingCode": "+1869"
     },
     {
         "name": "Saint Lucia",
         "code": "LC",
+        "alpha3Code": "LCA",
+        "capital": "Castries",
         "region": "Americas",
-        "capital": "Castries"
+        "subregion": "Caribbean",
+        "population": 183627,
+        "languages": ["English"],
+        "currency": "XCD",
+        "flag": "🇱🇨",
+        "callingCode": "+1758"
     },
     {
         "name": "Saint Vincent and the Grenadines",
         "code": "VC",
+        "alpha3Code": "VCT",
+        "capital": "Kingstown",
         "region": "Americas",
-        "capital": "Kingstown"
+        "subregion": "Caribbean",
+        "population": 110940,
+        "languages": ["English"],
+        "currency": "XCD",
+        "flag": "🇻🇨",
+        "callingCode": "+1784"
     },
     {
         "name": "Samoa",
         "code": "WS",
+        "alpha3Code": "WSM",
+        "capital": "Apia",
         "region": "Oceania",
-        "capital": "Apia"
+        "subregion": "Polynesia",
+        "population": 198414,
+        "languages": ["Samoan", "English"],
+        "currency": "WST",
+        "flag": "🇼🇸",
+        "callingCode": "+685"
     },
     {
         "name": "San Marino",
         "code": "SM",
+        "alpha3Code": "SMR",
+        "capital": "San Marino",
         "region": "Europe",
-        "capital": "San Marino"
+        "subregion": "Southern Europe",
+        "population": 33931,
+        "languages": ["Italian"],
+        "currency": "EUR",
+        "flag": "🇸🇲",
+        "callingCode": "+378"
     },
     {
         "name": "Sao Tome and Principe",
         "code": "ST",
+        "alpha3Code": "STP",
+        "capital": "São Tomé",
         "region": "Africa",
-        "capital": "São Tomé"
+        "subregion": "Middle Africa",
+        "population": 219159,
+        "languages": ["Portuguese"],
+        "currency": "STN",
+        "flag": "🇸🇹",
+        "callingCode": "+239"
     },
     {
         "name": "Saudi Arabia",
         "code": "SA",
+        "alpha3Code": "SAU",
+        "capital": "Riyadh",
         "region": "Asia",
-        "capital": "Riyadh"
+        "subregion": "Western Asia",
+        "population": 34813871,
+        "languages": ["Arabic"],
+        "currency": "SAR",
+        "flag": "🇸🇦",
+        "callingCode": "+966"
     },
     {
         "name": "Senegal",
         "code": "SN",
+        "alpha3Code": "SEN",
+        "capital": "Dakar",
         "region": "Africa",
-        "capital": "Dakar"
+        "subregion": "Western Africa",
+        "population": 16743927,
+        "languages": ["French"],
+        "currency": "XOF",
+        "flag": "🇸🇳",
+        "callingCode": "+221"
     },
     {
         "name": "Serbia",
         "code": "RS",
+        "alpha3Code": "SRB",
+        "capital": "Belgrade",
         "region": "Europe",
-        "capital": "Belgrade"
+        "subregion": "Southern Europe",
+        "population": 8737371,
+        "languages": ["Serbian"],
+        "currency": "RSD",
+        "flag": "🇷🇸",
+        "callingCode": "+381"
     },
     {
         "name": "Seychelles",
         "code": "SC",
+        "alpha3Code": "SYC",
+        "capital": "Victoria",
         "region": "Africa",
-        "capital": "Victoria"
+        "subregion": "Eastern Africa",
+        "population": 98347,
+        "languages": ["French", "English"],
+        "currency": "SCR",
+        "flag": "🇸🇨",
+        "callingCode": "+248"
     },
     {
         "name": "Sierra Leone",
         "code": "SL",
+        "alpha3Code": "SLE",
+        "capital": "Freetown",
         "region": "Africa",
-        "capital": "Freetown"
+        "subregion": "Western Africa",
+        "population": 7976983,
+        "languages": ["English"],
+        "currency": "SLL",
+        "flag": "🇸🇱",
+        "callingCode": "+232"
     },
     {
         "name": "Singapore",
         "code": "SG",
+        "alpha3Code": "SGP",
+        "capital": "Singapore",
         "region": "Asia",
-        "capital": "Singapore"
+        "subregion": "South-Eastern Asia",
+        "population": 5850342,
+        "languages": ["English", "Malay", "Chinese", "Tamil"],
+        "currency": "SGD",
+        "flag": "🇸🇬",
+        "callingCode": "+65"
     },
     {
         "name": "Slovakia",
         "code": "SK",
+        "alpha3Code": "SVK",
+        "capital": "Bratislava",
         "region": "Europe",
-        "capital": "Bratislava"
+        "subregion": "Central Europe",
+        "population": 5459642,
+        "languages": ["Slovak"],
+        "currency": "EUR",
+        "flag": "🇸🇰",
+        "callingCode": "+421"
     },
     {
         "name": "Slovenia",
         "code": "SI",
+        "alpha3Code": "SVN",
+        "capital": "Ljubljana",
         "region": "Europe",
-        "capital": "Ljubljana"
+        "subregion": "Southern Europe",
+        "population": 2078938,
+        "languages": ["Slovenian"],
+        "currency": "EUR",
+        "flag": "🇸🇮",
+        "callingCode": "+386"
     },
     {
         "name": "Solomon Islands",
         "code": "SB",
+        "alpha3Code": "SLB",
+        "capital": "Honiara",
         "region": "Oceania",
-        "capital": "Honiara"
+        "subregion": "Melanesia",
+        "population": 686884,
+        "languages": ["English"],
+        "currency": "SBD",
+        "flag": "🇸🇧",
+        "callingCode": "+677"
     },
     {
         "name": "Somalia",
         "code": "SO",
+        "alpha3Code": "SOM",
+        "capital": "Mogadishu",
         "region": "Africa",
-        "capital": "Mogadishu"
+        "subregion": "Eastern Africa",
+        "population": 15893222,
+        "languages": ["Somali", "Arabic"],
+        "currency": "SOS",
+        "flag": "🇸🇴",
+        "callingCode": "+252"
     },
     {
         "name": "South Africa",
         "code": "ZA",
+        "alpha3Code": "ZAF",
+        "capital": "Pretoria",
         "region": "Africa",
-        "capital": "Pretoria"
+        "subregion": "Southern Africa",
+        "population": 59308690,
+        "languages": ["English", "Afrikaans", "Zulu"],
+        "currency": "ZAR",
+        "flag": "🇿🇦",
+        "callingCode": "+27"
     },
     {
         "name": "South Korea",
         "code": "KR",
+        "alpha3Code": "KOR",
+        "capital": "Seoul",
         "region": "Asia",
-        "capital": "Seoul"
+        "subregion": "Eastern Asia",
+        "population": 51269185,
+        "languages": ["Korean"],
+        "currency": "KRW",
+        "flag": "🇰🇷",
+        "callingCode": "+82"
     },
     {
         "name": "South Sudan",
         "code": "SS",
+        "alpha3Code": "SSD",
+        "capital": "Juba",
         "region": "Africa",
-        "capital": "Juba"
+        "subregion": "Eastern Africa",
+        "population": 11193725,
+        "languages": ["English"],
+        "currency": "SSP",
+        "flag": "🇸🇸",
+        "callingCode": "+211"
     },
     {
         "name": "Spain",
         "code": "ES",
+        "alpha3Code": "ESP",
+        "capital": "Madrid",
         "region": "Europe",
-        "capital": "Madrid"
+        "subregion": "Southern Europe",
+        "population": 46754778,
+        "languages": ["Spanish"],
+        "currency": "EUR",
+        "flag": "🇪🇸",
+        "callingCode": "+34"
     },
     {
         "name": "Sri Lanka",
         "code": "LK",
+        "alpha3Code": "LKA",
+        "capital": "Sri Jayawardenepura Kotte",
         "region": "Asia",
-        "capital": "Sri Jayawardenepura Kotte"
+        "subregion": "Southern Asia",
+        "population": 21413249,
+        "languages": ["Sinhala", "Tamil"],
+        "currency": "LKR",
+        "flag": "🇱🇰",
+        "callingCode": "+94"
     },
     {
         "name": "Sudan",
         "code": "SD",
+        "alpha3Code": "SDN",
+        "capital": "Khartoum",
         "region": "Africa",
-        "capital": "Khartoum"
+        "subregion": "Northern Africa",
+        "population": 43849260,
+        "languages": ["Arabic", "English"],
+        "currency": "SDG",
+        "flag": "🇸🇩",
+        "callingCode": "+249"
     },
     {
         "name": "Suriname",
         "code": "SR",
+        "alpha3Code": "SUR",
+        "capital": "Paramaribo",
         "region": "Americas",
-        "capital": "Paramaribo"
+        "subregion": "South America",
+        "population": 586632,
+        "languages": ["Dutch"],
+        "currency": "SRD",
+        "flag": "🇸🇷",
+        "callingCode": "+597"
     },
     {
         "name": "Sweden",
         "code": "SE",
+        "alpha3Code": "SWE",
+        "capital": "Stockholm",
         "region": "Europe",
-        "capital": "Stockholm"
+        "subregion": "Northern Europe",
+        "population": 10099265,
+        "languages": ["Swedish"],
+        "currency": "SEK",
+        "flag": "🇸🇪",
+        "callingCode": "+46"
     },
     {
         "name": "Switzerland",
         "code": "CH",
+        "alpha3Code": "CHE",
+        "capital": "Bern",
         "region": "Europe",
-        "capital": "Bern"
+        "subregion": "Central Europe",
+        "population": 8654622,
+        "languages": ["German", "French", "Italian"],
+        "currency": "CHF",
+        "flag": "🇨🇭",
+        "callingCode": "+41"
     },
     {
         "name": "Syria",
         "code": "SY",
+        "alpha3Code": "SYR",
+        "capital": "Damascus",
         "region": "Asia",
-        "capital": "Damascus"
+        "subregion": "Western Asia",
+        "population": 17500658,
+        "languages": ["Arabic"],
+        "currency": "SYP",
+        "flag": "🇸🇾",
+        "callingCode": "+963"
     },
     {
         "name": "Taiwan",
         "code": "TW",
+        "alpha3Code": "TWN",
+        "capital": "Taipei",
         "region": "Asia",
-        "capital": "Taipei"
+        "subregion": "Eastern Asia",
+        "population": 23816775,
+        "languages": ["Chinese"],
+        "currency": "TWD",
+        "flag": "🇹🇼",
+        "callingCode": "+886"
     },
     {
         "name": "Tajikistan",
         "code": "TJ",
+        "alpha3Code": "TJK",
+        "capital": "Dushanbe",
         "region": "Asia",
-        "capital": "Dushanbe"
+        "subregion": "Central Asia",
+        "population": 9537645,
+        "languages": ["Tajik"],
+        "currency": "TJS",
+        "flag": "🇹🇯",
+        "callingCode": "+992"
     },
     {
         "name": "Tanzania",
         "code": "TZ",
+        "alpha3Code": "TZA",
+        "capital": "Dodoma",
         "region": "Africa",
-        "capital": "Dodoma"
+        "subregion": "Eastern Africa",
+        "population": 59734218,
+        "languages": ["Swahili", "English"],
+        "currency": "TZS",
+        "flag": "🇹🇿",
+        "callingCode": "+255"
     },
     {
         "name": "Thailand",
         "code": "TH",
+        "alpha3Code": "THA",
+        "capital": "Bangkok",
         "region": "Asia",
-        "capital": "Bangkok"
+        "subregion": "South-Eastern Asia",
+        "population": 69799978,
+        "languages": ["Thai"],
+        "currency": "THB",
+        "flag": "🇹🇭",
+        "callingCode": "+66"
     },
     {
         "name": "Togo",
         "code": "TG",
+        "alpha3Code": "TGO",
+        "capital": "Lomé",
         "region": "Africa",
-        "capital": "Lomé"
+        "subregion": "Western Africa",
+        "population": 8278724,
+        "languages": ["French"],
+        "currency": "XOF",
+        "flag": "🇹🇬",
+        "callingCode": "+228"
     },
     {
         "name": "Tonga",
         "code": "TO",
+        "alpha3Code": "TON",
+        "capital": "Nuku'alofa",
         "region": "Oceania",
-        "capital": "Nuku'alofa"
+        "subregion": "Polynesia",
+        "population": 105695,
+        "languages": ["English", "Tongan"],
+        "currency": "TOP",
+        "flag": "🇹🇴",
+        "callingCode": "+676"
     },
     {
         "name": "Trinidad and Tobago",
         "code": "TT",
+        "alpha3Code": "TTO",
+        "capital": "Port of Spain",
         "region": "Americas",
-        "capital": "Port of Spain"
+        "subregion": "Caribbean",
+        "population": 1399488,
+        "languages": ["English"],
+        "currency": "TTD",
+        "flag": "🇹🇹",
+        "callingCode": "+1868"
     },
     {
         "name": "Tunisia",
         "code": "TN",
+        "alpha3Code": "TUN",
+        "capital": "Tunis",
         "region": "Africa",
-        "capital": "Tunis"
+        "subregion": "Northern Africa",
+        "population": 11818619,
+        "languages": ["Arabic"],
+        "currency": "TND",
+        "flag": "🇹🇳",
+        "callingCode": "+216"
     },
     {
         "name": "Turkey",
         "code": "TR",
+        "alpha3Code": "TUR",
+        "capital": "Ankara",
         "region": "Asia",
-        "capital": "Ankara"
+        "subregion": "Western Asia",
+        "population": 84339067,
+        "languages": ["Turkish"],
+        "currency": "TRY",
+        "flag": "🇹🇷",
+        "callingCode": "+90"
     },
     {
         "name": "Turkmenistan",
         "code": "TM",
+        "alpha3Code": "TKM",
+        "capital": "Ashgabat",
         "region": "Asia",
-        "capital": "Ashgabat"
+        "subregion": "Central Asia",
+        "population": 6031200,
+        "languages": ["Turkmen"],
+        "currency": "TMT",
+        "flag": "🇹🇲",
+        "callingCode": "+993"
     },
     {
         "name": "Tuvalu",
         "code": "TV",
+        "alpha3Code": "TUV",
+        "capital": "Funafuti",
         "region": "Oceania",
-        "capital": "Funafuti"
+        "subregion": "Polynesia",
+        "population": 11792,
+        "languages": ["English"],
+        "currency": "AUD",
+        "flag": "🇹🇻",
+        "callingCode": "+688"
     },
     {
         "name": "Uganda",
         "code": "UG",
+        "alpha3Code": "UGA",
+        "capital": "Kampala",
         "region": "Africa",
-        "capital": "Kampala"
+        "subregion": "Eastern Africa",
+        "population": 45741007,
+        "languages": ["English", "Swahili"],
+        "currency": "UGX",
+        "flag": "🇺🇬",
+        "callingCode": "+256"
     },
     {
         "name": "Ukraine",
         "code": "UA",
+        "alpha3Code": "UKR",
+        "capital": "Kyiv",
         "region": "Europe",
-        "capital": "Kyiv"
+        "subregion": "Eastern Europe",
+        "population": 43733762,
+        "languages": ["Ukrainian"],
+        "currency": "UAH",
+        "flag": "🇺🇦",
+        "callingCode": "+380"
     },
     {
         "name": "United Arab Emirates",
         "code": "AE",
+        "alpha3Code": "ARE",
+        "capital": "Abu Dhabi",
         "region": "Asia",
-        "capital": "Abu Dhabi"
+        "subregion": "Western Asia",
+        "population": 9890402,
+        "languages": ["Arabic"],
+        "currency": "AED",
+        "flag": "🇦🇪",
+        "callingCode": "+971"
     },
     {
         "name": "United Kingdom",
         "code": "GB",
+        "alpha3Code": "GBR",
+        "capital": "London",
         "region": "Europe",
-        "capital": "London"
+        "subregion": "Northern Europe",
+        "population": 67886011,
+        "languages": ["English"],
+        "currency": "GBP",
+        "flag": "🇬🇧",
+        "callingCode": "+44"
     },
     {
         "name": "United States",
         "code": "US",
+        "alpha3Code": "USA",
+        "capital": "Washington, D.C.",
         "region": "Americas",
-        "capital": "Washington, D.C."
+        "subregion": "Northern America",
+        "population": 331002651,
+        "languages": ["English"],
+        "currency": "USD",
+        "flag": "🇺🇸",
+        "callingCode": "+1"
     },
     {
         "name": "Uruguay",
         "code": "UY",
+        "alpha3Code": "URY",
+        "capital": "Montevideo",
         "region": "Americas",
-        "capital": "Montevideo"
+        "subregion": "South America",
+        "population": 3473730,
+        "languages": ["Spanish"],
+        "currency": "UYU",
+        "flag": "🇺🇾",
+        "callingCode": "+598"
     },
     {
         "name": "Uzbekistan",
         "code": "UZ",
+        "alpha3Code": "UZB",
+        "capital": "Tashkent",
         "region": "Asia",
-        "capital": "Tashkent"
+        "subregion": "Central Asia",
+        "population": 33469203,
+        "languages": ["Uzbek"],
+        "currency": "UZS",
+        "flag": "🇺🇿",
+        "callingCode": "+998"
     },
     {
         "name": "Vanuatu",
         "code": "VU",
+        "alpha3Code": "VUT",
+        "capital": "Port Vila",
         "region": "Oceania",
-        "capital": "Port Vila"
+        "subregion": "Melanesia",
+        "population": 307145,
+        "languages": ["English", "French"],
+        "currency": "VUV",
+        "flag": "🇻🇺",
+        "callingCode": "+678"
     },
     {
         "name": "Vatican City",
         "code": "VA",
+        "alpha3Code": "VAT",
+        "capital": "Vatican City",
         "region": "Europe",
-        "capital": "Vatican City"
+        "subregion": "Southern Europe",
+        "population": 801,
+        "languages": ["Latin", "Italian"],
+        "currency": "EUR",
+        "flag": "🇻🇦",
+        "callingCode": "+379"
     },
     {
         "name": "Venezuela",
         "code": "VE",
+        "alpha3Code": "VEN",
+        "capital": "Caracas",
         "region": "Americas",
-        "capital": "Caracas"
+        "subregion": "South America",
+        "population": 28435940,
+        "languages": ["Spanish"],
+        "currency": "VES",
+        "flag": "🇻🇪",
+        "callingCode": "+58"
     },
     {
         "name": "Vietnam",
         "code": "VN",
+        "alpha3Code": "VNM",
+        "capital": "Hanoi",
         "region": "Asia",
-        "capital": "Hanoi"
+        "subregion": "South-Eastern Asia",
+        "population": 97338579,
+        "languages": ["Vietnamese"],
+        "currency": "VND",
+        "flag": "🇻🇳",
+        "callingCode": "+84"
     },
     {
         "name": "Yemen",
         "code": "YE",
+        "alpha3Code": "YEM",
+        "capital": "Sana'a",
         "region": "Asia",
-        "capital": "Sana'a"
+        "subregion": "Western Asia",
+        "population": 29825964,
+        "languages": ["Arabic"],
+        "currency": "YER",
+        "flag": "🇾🇪",
+        "callingCode": "+967"
     },
     {
         "name": "Zambia",
         "code": "ZM",
+        "alpha3Code": "ZMB",
+        "capital": "Lusaka",
         "region": "Africa",
-        "capital": "Lusaka"
+        "subregion": "Eastern Africa",
+        "population": 18383955,
+        "languages": ["English"],
+        "currency": "ZMW",
+        "flag": "🇿🇲",
+        "callingCode": "+260"
     },
     {
         "name": "Zimbabwe",
         "code": "ZW",
+        "alpha3Code": "ZWE",
+        "capital": "Harare",
         "region": "Africa",
-        "capital": "Harare"
+        "subregion": "Eastern Africa",
+        "population": 14862924,
+        "languages": ["English"],
+        "currency": "ZWL",
+        "flag": "🇿🇼",
+        "callingCode": "+263"
     }
 ]

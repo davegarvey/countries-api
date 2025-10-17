@@ -1,4 +1,5 @@
 import countries from '../data/countries.json';
+import openapi from '../openapi.json';
 
 // Helper to add CORS headers
 function corsHeaders() {
@@ -34,7 +35,34 @@ export default {
         const url = new URL(request.url);
         const path = url.pathname.split('/').filter(Boolean);
 
-        // Root endpoint - HTML documentation
+        // GET /docs - Interactive API documentation with ReDoc
+        if (path[0] === 'docs') {
+            const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries API - Documentation</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+    <style>
+        body { margin: 0; padding: 0; font-family: sans-serif; }
+        redoc { display: block; }
+    </style>
+</head>
+<body>
+    <redoc spec-url="/openapi.json"></redoc>
+    <script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"></script>
+</body>
+</html>`;
+            return new Response(html, {
+                headers: {
+                    'Content-Type': 'text/html',
+                    ...corsHeaders(),
+                },
+            });
+        }
+
+        // Root endpoint - HTML homepage
         if (path.length === 0) {
             const html = `<!DOCTYPE html>
 <html lang="en">
@@ -42,244 +70,143 @@ export default {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countries API - Free REST API for Country Data</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
         }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            overflow: hidden;
-        }
-        header {
+        .hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 40px;
+            padding: 40px 20px;
             text-align: center;
         }
-        h1 { font-size: 2.5em; margin-bottom: 10px; }
-        .subtitle { font-size: 1.2em; opacity: 0.95; }
-        .content { padding: 40px; }
-        h2 { color: #667eea; margin: 30px 0 20px 0; font-size: 1.8em; }
-        .endpoint {
-            background: #f7f9fc;
-            border-left: 4px solid #667eea;
-            padding: 15px 20px;
-            margin: 15px 0;
-            border-radius: 4px;
-        }
-        .endpoint-title {
-            font-family: 'Courier New', monospace;
-            font-weight: bold;
-            color: #667eea;
-            font-size: 1.1em;
-        }
-        .endpoint-desc { color: #666; margin-top: 5px; }
-        .try-link {
-            display: inline-block;
-            margin-top: 8px;
-            color: #667eea;
-            text-decoration: none;
-            font-size: 0.9em;
-        }
-        .try-link:hover { text-decoration: underline; }
+        .hero h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .hero p { font-size: 1.2em; opacity: 0.95; margin-bottom: 30px; }
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
-            margin: 20px 0;
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
         }
         .feature {
-            background: #f7f9fc;
+            background: rgba(102, 126, 234, 0.1);
             padding: 20px;
             border-radius: 8px;
             text-align: center;
         }
         .feature-icon { font-size: 2em; margin-bottom: 10px; }
         .feature-title { font-weight: bold; color: #667eea; margin-bottom: 5px; }
-        code {
-            background: #f0f0f0;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9em;
+        .section-title {
+            max-width: 1000px;
+            margin: 40px auto 20px;
+            padding: 0 20px;
+            font-size: 1.8em;
+            color: #667eea;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+        }
+        .quick-links {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .quick-link {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .quick-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
         .footer {
             text-align: center;
-            padding: 30px;
+            padding: 30px 20px;
             background: #f7f9fc;
             color: #666;
             border-top: 1px solid #e0e0e0;
+            margin-top: 60px;
         }
-        .examples {
-            background: #2d3748;
-            color: #e2e8f0;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            font-family: 'Courier New', monospace;
-            overflow-x: auto;
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
         }
-        .examples div { margin: 8px 0; }
-        .comment { color: #68d391; }
+        .footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>🌍 Countries API</h1>
-            <p class="subtitle">Free REST API for country data - perfect for testing, demos & learning</p>
-        </header>
+    <div class="hero">
+        <h1>🌍 Countries API</h1>
+        <p>Free REST API for country data - perfect for testing, demos & learning</p>
+        <a href="/docs" class="cta-button">View Interactive Docs →</a>
+    </div>
 
-        <div class="content">
-            <div class="features">
-                <div class="feature">
-                    <div class="feature-icon">🌐</div>
-                    <div class="feature-title">195 Countries</div>
-                    <div>Complete global dataset</div>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">⚡</div>
-                    <div class="feature-title">No Auth Required</div>
-                    <div>Open API, start immediately</div>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">🎨</div>
-                    <div class="feature-title">Rich Data</div>
-                    <div>Flags, populations, currencies & more</div>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">🚀</div>
-                    <div class="feature-title">CORS Enabled</div>
-                    <div>Use from any frontend</div>
-                </div>
-            </div>
-
-            <h2>Quick Examples</h2>
-            <div class="examples">
-<div><span class="comment"># Get all countries</span></div>
-<div>curl ${url.origin}/countries</div>
-<div></div>
-<div><span class="comment"># Get a specific country</span></div>
-<div>curl ${url.origin}/countries/US</div>
-<div></div>
-<div><span class="comment"># Get a random country</span></div>
-<div>curl ${url.origin}/countries/random</div>
-<div></div>
-<div><span class="comment"># Filter by region</span></div>
-<div>curl ${url.origin}/countries?region=Europe</div>
-<div></div>
-<div><span class="comment"># Search countries</span></div>
-<div>curl ${url.origin}/search?q=island</div>
-            </div>
-
-            <h2>Popular Endpoints</h2>
-
-            <div class="endpoint">
-                <div class="endpoint-title">GET /countries</div>
-                <div class="endpoint-desc">Get all countries with complete data</div>
-                <a href="/countries" class="try-link">Try it →</a>
-            </div>
-
-            <div class="endpoint">
-                <div class="endpoint-title">GET /countries/{code}</div>
-                <div class="endpoint-desc">Get specific country by code (e.g., US, FR, JPN)</div>
-                <a href="/countries/US" class="try-link">Try /countries/US →</a>
-            </div>
-
-            <div class="endpoint">
-                <div class="endpoint-title">GET /countries/random</div>
-                <div class="endpoint-desc">Get a random country - perfect for testing!</div>
-                <a href="/countries/random" class="try-link">Try it →</a>
-            </div>
-
-            <div class="endpoint">
-                <div class="endpoint-title">GET /countries?region={region}</div>
-                <div class="endpoint-desc">Filter by region: Africa, Americas, Asia, Europe, Oceania</div>
-                <a href="/countries?region=Europe" class="try-link">Try /countries?region=Europe →</a>
-            </div>
-
-            <div class="endpoint">
-                <div class="endpoint-title">GET /countries?currency={currency}</div>
-                <div class="endpoint-desc">Filter by currency code</div>
-                <a href="/countries?currency=EUR" class="try-link">Try /countries?currency=EUR →</a>
-            </div>
-
-            <div class="endpoint">
-                <div class="endpoint-title">GET /countries?language={language}</div>
-                <div class="endpoint-desc">Filter by language</div>
-                <a href="/countries?language=Spanish" class="try-link">Try /countries?language=Spanish →</a>
-            </div>
-
-            <div class="endpoint">
-                <div class="endpoint-title">GET /search?q={query}</div>
-                <div class="endpoint-desc">Search countries by name or capital</div>
-                <a href="/search?q=united" class="try-link">Try /search?q=united →</a>
-            </div>
-
-            <div class="endpoint">
-                <div class="endpoint-title">GET /stats</div>
-                <div class="endpoint-desc">Global statistics and analytics</div>
-                <a href="/stats" class="try-link">Try it →</a>
-            </div>
-
-            <h2>More Endpoints</h2>
-            <div class="endpoint">
-                <div class="endpoint-title">GET /regions</div>
-                <div class="endpoint-desc">Get all unique regions</div>
-                <a href="/regions" class="try-link">Try it →</a>
-            </div>
-
-            <div class="endpoint">
-                <div class="endpoint-title">GET /subregions</div>
-                <div class="endpoint-desc">Get all unique subregions</div>
-                <a href="/subregions" class="try-link">Try it →</a>
-            </div>
-
-            <div class="endpoint">
-                <div class="endpoint-title">GET /currencies</div>
-                <div class="endpoint-desc">Get all unique currencies</div>
-                <a href="/currencies" class="try-link">Try it →</a>
-            </div>
-
-            <div class="endpoint">
-                <div class="endpoint-title">GET /languages</div>
-                <div class="endpoint-desc">Get all unique languages</div>
-                <a href="/languages" class="try-link">Try it →</a>
-            </div>
-
-            <div class="endpoint">
-                <div class="endpoint-title">GET /countries/{code}/flag</div>
-                <div class="endpoint-desc">Get just the flag emoji</div>
-                <a href="/countries/US/flag" class="try-link">Try /countries/US/flag →</a>
-            </div>
-
-            <div class="endpoint">
-                <div class="endpoint-title">GET /countries/{code}/neighbors</div>
-                <div class="endpoint-desc">Get neighboring countries by subregion</div>
-                <a href="/countries/FR/neighbors" class="try-link">Try /countries/FR/neighbors →</a>
-            </div>
-
-            <h2>Data Fields</h2>
-            <p>Each country includes: <code>name</code>, <code>code</code>, <code>alpha3Code</code>, <code>capital</code>, <code>region</code>, <code>subregion</code>, <code>population</code>, <code>languages</code>, <code>currency</code>, <code>flag</code>, <code>callingCode</code></p>
-
-            <h2>Use Cases</h2>
-            <p>Perfect for learning, testing, prototypes, quiz apps, data visualization, country pickers, tutorials, and more!</p>
+    <div class="features">
+        <div class="feature">
+            <div class="feature-icon">🌐</div>
+            <div class="feature-title">195 Countries</div>
+            <div>Complete global dataset</div>
         </div>
-
-        <div class="footer">
-            <p>Built with ❤️ • Powered by Cloudflare Workers • No authentication required</p>
-            <p style="margin-top: 10px;">Open source and free to use</p>
+        <div class="feature">
+            <div class="feature-icon">⚡</div>
+            <div class="feature-title">No Auth Required</div>
+            <div>Open API, start immediately</div>
         </div>
+        <div class="feature">
+            <div class="feature-icon">🎨</div>
+            <div class="feature-title">Rich Data</div>
+            <div>Flags, populations, currencies & more</div>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">🚀</div>
+            <div class="feature-title">CORS Enabled</div>
+            <div>Use from any frontend</div>
+        </div>
+    </div>
+
+    <h2 class="section-title">Quick Start</h2>
+    
+    <div class="quick-links">
+        <a href="/countries" class="quick-link">📋 All Countries</a>
+        <a href="/countries/US" class="quick-link">🇺🇸 Get US Data</a>
+        <a href="/countries/random" class="quick-link">🎲 Random Country</a>
+        <a href="/countries?region=Europe" class="quick-link">🌍 Europe Only</a>
+        <a href="/search?q=island" class="quick-link">🔍 Search Islands</a>
+        <a href="/stats" class="quick-link">📊 Statistics</a>
+    </div>
+
+    <div class="footer">
+        <p>Built with ❤️ 🤖 🐱 • <a href="https://github.com/davegarvey/countries-api" target="_blank">View source on GitHub</a> • Powered by Cloudflare Workers</p>
+        <p style="margin-top: 10px; font-size: 0.9em;">Open source and free to use • No authentication required</p>
     </div>
 </body>
 </html>`;
@@ -289,6 +216,11 @@ export default {
                     ...corsHeaders(),
                 },
             });
+        }
+
+        // GET /openapi.json - Serve OpenAPI spec
+        if (path[0] === 'openapi.json') {
+            return jsonResponse(openapi);
         }
 
         // GET /countries
@@ -443,6 +375,6 @@ export default {
         }
 
         // 404 - Not found
-        return jsonResponse({ error: 'Endpoint not found', message: 'Try GET / for API documentation' }, 404);
+        return jsonResponse({ error: 'Endpoint not found', message: 'Try GET / for homepage or /docs for API documentation' }, 404);
     },
 };

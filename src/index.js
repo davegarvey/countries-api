@@ -1,16 +1,28 @@
-import { handleHome, handleDocs, handleCountries, handleOpenAPI } from './handlers.js';
-import { homepageHTML, docsHTML } from './html/templates.js';
-import openapi from '../openapi.json' assert { type: "json" };
+import countries from '../data/countries.json';
+import openapi from '../openapi.json';
 
+// Helper to add CORS headers
 function corsHeaders() {
     return {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'GET, OPTIONS',
-        'Access-Control-Allow-Headers': '*',
+        'Access-Control-Allow-Headers': 'Content-Type',
     };
 }
 
-const elaborateHomepageHTML = `<!DOCTYPE html>
+// Helper to create JSON response with CORS
+function jsonResponse(data, status = 200) {
+    return new Response(JSON.stringify(data, null, 2), {
+        status,
+        headers: {
+            'Content-Type': 'application/json',
+            ...corsHeaders(),
+        },
+    });
+}
+
+// Homepage HTML
+const homepageHTML = `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -157,7 +169,8 @@ const elaborateHomepageHTML = `<!DOCTYPE html>
 </body>
 </html>`;
 
-const redocHTML = `<!DOCTYPE html>
+// Docs HTML
+const docsHTML = `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -171,12 +184,13 @@ const redocHTML = `<!DOCTYPE html>
 </head>
 <body>
     <redoc spec-url="/openapi.json"></redoc>
-    <script src="https://cdn.jsdelivr.net/npm/redoc@latest/bundles/redoc.standalone.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"><\/script>
 </body>
 </html>`;
 
 export default {
     async fetch(request, env) {
+        // Handle CORS preflight
         if (request.method === 'OPTIONS') {
             return new Response(null, { headers: corsHeaders() });
         }
@@ -186,33 +200,185 @@ export default {
         }
 
         const url = new URL(request.url);
+        const path = url.pathname.split('/').filter(Boolean);
 
-        if (url.pathname === '/') {
-            return new Response(elaborateHomepageHTML, {
-                headers: { 'Content-Type': 'text/html', ...corsHeaders() }
+        // GET / - Homepage
+        if (path.length === 0) {
+            return new Response(homepageHTML, {
+                headers: {
+                    'Content-Type': 'text/html',
+                    ...corsHeaders(),
+                },
             });
         }
 
-        if (url.pathname === '/docs') {
-            return new Response(redocHTML, {
-                headers: { 'Content-Type': 'text/html', ...corsHeaders() }
+        // GET /docs - Interactive API documentation
+        if (path[0] === 'docs') {
+            return new Response(docsHTML, {
+                headers: {
+                    'Content-Type': 'text/html',
+                    ...corsHeaders(),
+                },
             });
         }
 
-        if (url.pathname === '/openapi.json') {
-            return new Response(JSON.stringify(openapi), {
-                headers: { 'Content-Type': 'application/json', ...corsHeaders() }
-            });
+        // GET /openapi.json - Serve OpenAPI spec
+        if (path[0] === 'openapi.json') {
+            return jsonResponse(openapi);
         }
 
-        if (url.pathname === '/countries') {
-            const response = handleCountries(url.searchParams);
-            return new Response(
-                typeof response.body === 'string' ? response.body : JSON.stringify(response.body),
-                { headers: { ...response.headers, ...corsHeaders() } }
+        // GET /countries
+        if (path[0] === 'countries') {
+            // GET /countries/random
+            if (path[1] === 'random') {
+                const randomCountry = countries[Math.floor(Math.random() * countries.length)];
+                return jsonResponse(randomCountry);
+            }
+
+            // GET /countries/{code}
+            if (path[1]) {
+                const code = path[1].toUpperCase();
+                const country = countries.find(
+                    c => c.code.toUpperCase() === code || c.alpha3Code.toUpperCase() === code
+                );
+
+                if (!country) {
+                    return jsonResponse({ error: 'Country not found' }, 404);
+                }
+
+                // GET /countries/{code}/flag
+                if (path[2] === 'flag') {
+                    return new Response(country.flag, {
+                        headers: {
+                            'Content-Type': 'text/plain; charset=utf-8',
+                            ...corsHeaders()
+                        },
+                    });
+                }
+
+                // GET /countries/{code}/neighbors
+                if (path[2] === 'neighbors') {
+                    const neighbors = countries.filter(
+                        c => c.subregion === country.subregion && c.code !== country.code
+                    );
+                    return jsonResponse({
+                        country: country.name,
+                        subregion: country.subregion,
+                        neighbors: neighbors.map(c => ({ name: c.name, code: c.code, flag: c.flag })),
+                    });
+                }
+
+                return jsonResponse(country);
+            }
+
+            // GET /countries with filters
+            let result = [...countries];
+
+            // Filter by region
+            const region = url.searchParams.get('region');
+            if (region) {
+                result = result.filter(c => c.region.toLowerCase() === region.toLowerCase());
+            }
+
+            // Filter by subregion
+            const subregion = url.searchParams.get('subregion');
+            if (subregion) {
+                result = result.filter(c => c.subregion.toLowerCase().includes(subregion.toLowerCase()));
+            }
+
+            // Filter by currency
+            const currency = url.searchParams.get('currency');
+            if (currency) {
+                result = result.filter(c => c.currency.toUpperCase() === currency.toUpperCase());
+            }
+
+            // Filter by language
+            const language = url.searchParams.get('language');
+            if (language) {
+                result = result.filter(c =>
+                    c.languages.some(lang => lang.toLowerCase().includes(language.toLowerCase()))
+                );
+            }
+
+            // Limit results
+            const limit = url.searchParams.get('limit');
+            if (limit) {
+                const limitNum = parseInt(limit, 10);
+                if (!isNaN(limitNum) && limitNum > 0) {
+                    result = result.slice(0, limitNum);
+                }
+            }
+
+            return jsonResponse(result);
+        }
+
+        // GET /regions
+        if (path[0] === 'regions') {
+            const regions = [...new Set(countries.map(c => c.region))].sort();
+            return jsonResponse(regions);
+        }
+
+        // GET /subregions
+        if (path[0] === 'subregions') {
+            const subregions = [...new Set(countries.map(c => c.subregion))].sort();
+            return jsonResponse(subregions);
+        }
+
+        // GET /currencies
+        if (path[0] === 'currencies') {
+            const currencies = [...new Set(countries.map(c => c.currency))].sort();
+            return jsonResponse(currencies);
+        }
+
+        // GET /languages
+        if (path[0] === 'languages') {
+            const languages = [...new Set(countries.flatMap(c => c.languages))].sort();
+            return jsonResponse(languages);
+        }
+
+        // GET /search?q=query
+        if (path[0] === 'search') {
+            const query = url.searchParams.get('q');
+            if (!query) {
+                return jsonResponse({ error: 'Query parameter "q" is required' }, 400);
+            }
+
+            const results = countries.filter(c =>
+                c.name.toLowerCase().includes(query.toLowerCase()) ||
+                c.capital.toLowerCase().includes(query.toLowerCase())
             );
+
+            return jsonResponse({
+                query,
+                count: results.length,
+                results,
+            });
         }
 
-        return new Response('Not Found', { status: 404 });
-    }
+        // GET /stats
+        if (path[0] === 'stats') {
+            const totalPopulation = countries.reduce((sum, c) => sum + c.population, 0);
+            const regionCounts = countries.reduce((acc, c) => {
+                acc[c.region] = (acc[c.region] || 0) + 1;
+                return acc;
+            }, {});
+
+            const stats = {
+                totalCountries: countries.length,
+                totalPopulation,
+                regions: Object.keys(regionCounts).length,
+                subregions: new Set(countries.map(c => c.subregion)).size,
+                currencies: new Set(countries.map(c => c.currency)).size,
+                languages: new Set(countries.flatMap(c => c.languages)).size,
+                countriesByRegion: regionCounts,
+                mostPopulousCountry: countries.reduce((max, c) => c.population > max.population ? c : max),
+                leastPopulousCountry: countries.reduce((min, c) => c.population < min.population ? c : min),
+            };
+
+            return jsonResponse(stats);
+        }
+
+        // 404 - Not found
+        return jsonResponse({ error: 'Endpoint not found', message: 'Try GET / for homepage or /docs for API documentation' }, 404);
+    },
 };

@@ -22,12 +22,17 @@ function jsonResponse(data, status = 200) {
 }
 
 // Homepage HTML
+const siteOrigin = 'https://countries-api.davegarvey.workers.dev';
+
 const homepageHTML = `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="4IylR-wp0Rf8EH9hDRDYr8uAZVTKsVCfw5IpqwclA8s" />
     <title>Countries API - Free REST API for Country Data</title>
+    <meta name="description" content="Free REST API for data on 195 countries, including capitals, populations, currencies, languages, and flags. Explore endpoints and start building with no API key.">
+    <link rel="canonical" href="${siteOrigin}/">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -176,6 +181,8 @@ const docsHTML = `<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countries API - Documentation</title>
+    <meta name="description" content="Explore endpoint reference and examples for the free Countries API, with data for 195 countries and no API key required.">
+    <link rel="canonical" href="${siteOrigin}/docs">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
     <style>
         body { margin: 0; padding: 0; font-family: sans-serif; }
@@ -219,6 +226,26 @@ export default {
                     'Content-Type': 'text/html',
                     ...corsHeaders(),
                 },
+            });
+        }
+
+        // GET /robots.txt
+        if (path.length === 1 && path[0] === 'robots.txt') {
+            return new Response(`User-agent: *\nAllow: /\nSitemap: ${siteOrigin}/sitemap.xml\n`, {
+                headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+            });
+        }
+
+        // GET /sitemap.xml
+        if (path.length === 1 && path[0] === 'sitemap.xml') {
+            const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url><loc>${siteOrigin}/</loc></url>
+    <url><loc>${siteOrigin}/docs</loc></url>
+</urlset>`;
+
+            return new Response(sitemap, {
+                headers: { 'Content-Type': 'application/xml; charset=utf-8' },
             });
         }
 

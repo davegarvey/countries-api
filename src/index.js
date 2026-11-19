@@ -31,7 +31,7 @@ const homepageHTML = `<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="4IylR-wp0Rf8EH9hDRDYr8uAZVTKsVCfw5IpqwclA8s" />
     <title>Countries API - Free REST API for Country Data</title>
-    <meta name="description" content="Free REST API for data on 195 countries, including capitals, populations, currencies, languages, and flags. Explore endpoints and start building with no API key.">
+    <meta name="description" content="Free REST API for data on 197 countries, including capitals, populations, currencies, languages, and flags. Explore endpoints and start building with no API key.">
     <link rel="canonical" href="${siteOrigin}/">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
     <style>
@@ -136,7 +136,7 @@ const homepageHTML = `<!DOCTYPE html>
     <div class="features">
         <div class="feature">
             <div class="feature-icon">🌐</div>
-            <div class="feature-title">195 Countries</div>
+            <div class="feature-title">197 Countries</div>
             <div>Complete global dataset</div>
         </div>
         <div class="feature">
@@ -181,7 +181,7 @@ const docsHTML = `<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countries API - Documentation</title>
-    <meta name="description" content="Explore endpoint reference and examples for the free Countries API, with data for 195 countries and no API key required.">
+    <meta name="description" content="Explore endpoint reference and examples for the free Countries API, with data for 197 countries and no API key required.">
     <link rel="canonical" href="${siteOrigin}/docs">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
     <style>

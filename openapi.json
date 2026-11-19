@@ -2,13 +2,13 @@
     "openapi": "3.0.0",
     "info": {
         "title": "Countries API",
-        "description": "Free REST API for country data - perfect for testing, demos & learning",
+        "description": "Free REST API for country data - perfect for testing, demos & learning. MIT applies to the API software; country data has source-specific terms documented in the repository README.",
         "version": "1.0.0",
         "contact": {
             "name": "David Garvey"
         },
         "license": {
-            "name": "MIT"
+            "name": "MIT (API software; data terms in README)"
         }
     },
     "servers": [
@@ -478,11 +478,12 @@
                     },
                     "subregion": {
                         "type": "string",
-                        "example": "North America"
+                        "example": "Northern America"
                     },
                     "population": {
                         "type": "integer",
-                        "example": 331002651
+                        "description": "Estimated total population; see the README for source and reference dates.",
+                        "example": 341784857
                     },
                     "languages": {
                         "type": "array",
@@ -491,7 +492,8 @@
                         },
                         "example": [
                             "English"
-                        ]
+                        ],
+                        "description": "Official languages, with principal or recorded-use languages where no national official-language list is available."
                     },
                     "currency": {
                         "type": "string",
@@ -505,7 +507,8 @@
                     },
                     "callingCode": {
                         "type": "string",
-                        "example": "1"
+                        "example": "+1",
+                        "description": "International dialing prefix; Vatican City uses Italy’s +39 plan."
                     }
                 }
             },
@@ -566,11 +569,13 @@
                 "properties": {
                     "totalCountries": {
                         "type": "integer",
-                        "example": 195
+                        "description": "Number of countries in the dataset.",
+                        "example": 197
                     },
                     "totalPopulation": {
                         "type": "integer",
-                        "example": 7874965825
+                        "description": "Sum of the population estimates in the dataset; reference dates differ by record.",
+                        "example": 8202007769
                     },
                     "regions": {
                         "type": "integer",
@@ -582,19 +587,19 @@
                     },
                     "currencies": {
                         "type": "integer",
-                        "example": 142
+                        "example": 143
                     },
                     "languages": {
                         "type": "integer",
-                        "example": 184
+                        "example": 197
                     },
                     "countriesByRegion": {
                         "type": "object",
                         "example": {
                             "Africa": 54,
                             "Americas": 35,
-                            "Asia": 60,
-                            "Europe": 50,
+                            "Asia": 49,
+                            "Europe": 45,
                             "Oceania": 14
                         }
                     },

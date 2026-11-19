@@ -1,5 +1,7 @@
 MIT License
 
+This license applies to the API software only. It does not grant rights in the third-party data included in `data/countries.json`; see the source-specific reuse terms in README.md.
+
 Copyright 2025 David Garvey
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

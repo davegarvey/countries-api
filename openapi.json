@@ -2,13 +2,14 @@
     "openapi": "3.0.0",
     "info": {
         "title": "Countries API",
-        "description": "Free REST API for country data - perfect for testing, demos & learning. MIT applies to the API software; country data has source-specific terms documented in the repository README.",
+        "description": "Free REST API for country data - perfect for testing, demos & learning. MIT applies to the API software; country data has source-specific terms and attribution requirements (World Bank CC BY 4.0, Taiwan OGDL v1.0, UK OGL v3.0, Wikidata CC0, Natural Earth public domain); see https://github.com/davegarvey/countries-api#population-data.",
         "version": "1.0.0",
         "contact": {
             "name": "David Garvey"
         },
         "license": {
-            "name": "MIT (API software; data terms in README)"
+            "name": "MIT (API software; data terms in README)",
+            "url": "https://github.com/davegarvey/countries-api#population-data"
         }
     },
     "servers": [

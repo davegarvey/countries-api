@@ -169,7 +169,8 @@ const homepageHTML = `<!DOCTYPE html>
 
     <div class="footer">
         <p>Built with ❤️ 🤖 🐱 • <a href="https://github.com/davegarvey/countries-api" target="_blank">View source on GitHub</a> • Powered by Cloudflare Workers</p>
-        <p style="margin-top: 10px; font-size: 0.9em;">Open source and free to use • No authentication required</p>
+        <p style="margin-top: 10px; font-size: 0.9em;">API software MIT licensed • No authentication required</p>
+        <p style="margin-top: 10px; font-size: 0.9em;">Country data from Wikidata (CC0), Natural Earth (public domain), the World Bank (CC BY 4.0), Taiwan's Department of Household Registration (Open Government Data License v1.0) and UK PCGN (contains public sector information licensed under the Open Government Licence v3.0) • <a href="https://github.com/davegarvey/countries-api#population-data" target="_blank">Sources, licences and attribution</a></p>
     </div>
 </body>
 </html>`;

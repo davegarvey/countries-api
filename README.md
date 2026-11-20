@@ -1,55 +1,32 @@
-# 🌍 Countries API
+# Countries API
 
-A free REST API for country data - perfect for testing, demos, prototypes, and learning.
+A free, read-only REST API for country data, intended for testing, demos, prototypes and teaching.
 
-Get information for 197 countries, including names, capitals, populations, currencies, languages, flags, and more. No authentication required, CORS enabled, and powered by [Cloudflare Workers](https://developers.cloudflare.com/workers/) for blazing-fast global performance.
+It serves 197 records: the 193 UN member states, the two UN observer states (Palestine and Vatican City), Kosovo and Taiwan. Each record includes names, ISO codes, capital, region, population, languages, currency, flag emoji and calling code. No authentication is required, CORS is enabled for all origins, and responses are indented JSON. The API runs on [Cloudflare Workers](https://developers.cloudflare.com/workers/).
 
-## 🚀 Quick Start
+**Live API:** [https://countries-api.davegarvey.workers.dev](https://countries-api.davegarvey.workers.dev) · **Interactive docs:** [/docs](https://countries-api.davegarvey.workers.dev/docs) · **OpenAPI spec:** [/openapi.json](https://countries-api.davegarvey.workers.dev/openapi.json)
 
-**Live API:** [https://countries-api.davegarvey.workers.dev](https://countries-api.davegarvey.workers.dev)
+## Quick start
 
 ```bash
-# Get all countries
+# All countries
 curl https://countries-api.davegarvey.workers.dev/countries
 
-# Get a specific country
+# One country by ISO code
 curl https://countries-api.davegarvey.workers.dev/countries/US
 
-# Get a random country (great for testing!)
+# A random country
 curl https://countries-api.davegarvey.workers.dev/countries/random
 
-# Filter by region
-curl https://countries-api.davegarvey.workers.dev/countries?region=Europe
+# Countries in Europe
+curl "https://countries-api.davegarvey.workers.dev/countries?region=Europe"
 
-# Search for countries
-curl https://countries-api.davegarvey.workers.dev/search?q=island
+# Countries whose name or capital contains "island"
+curl "https://countries-api.davegarvey.workers.dev/search?q=island"
 ```
 
-## 📋 Features
+Example response from `GET /countries/US`:
 
-- **197 Countries** - Complete global dataset
-- **Rich Data** - Names, capitals, populations, currencies, languages, flags, calling codes
-- **Flexible Filtering** - By region, subregion, currency, language
-- **No Auth Required** - Open API, no API keys needed
-- **CORS Enabled** - Use directly from frontend applications
-- **Fast & Reliable** - Powered by Cloudflare's global network
-- **Pretty JSON** - Human-readable formatted responses
-
-## 🔗 Common Endpoints
-
-### Get All Countries
-```http
-GET /countries
-```
-Returns all 197 countries.
-
-### Get Specific Country
-```http
-GET /countries/{code}
-```
-Get country by 2-letter (US, FR) or 3-letter (USA, FRA) ISO code.
-
-**Example Response:**
 ```json
 {
   "name": "United States",
@@ -66,130 +43,96 @@ Get country by 2-letter (US, FR) or 3-letter (USA, FRA) ISO code.
 }
 ```
 
-### Get Random Country
-```http
-GET /countries/random
-```
-Returns a random country - perfect for quiz apps, testing, or learning!
+## Endpoints
 
-### Filter by Region
-```http
-GET /countries?region={region}
-```
-Available regions: `Africa`, `Americas`, `Asia`, `Europe`, `Oceania`
+All endpoints accept `GET` only.
 
-**Example:**
-```bash
-GET /countries?region=Europe
-```
+| Endpoint | Returns |
+| --- | --- |
+| `/countries` | All countries, optionally filtered (see below) |
+| `/countries/{code}` | One country by two-letter (`US`) or three-letter (`USA`) ISO code, case-insensitive; `404` if not found |
+| `/countries/{code}/flag` | The flag emoji as plain text |
+| `/countries/{code}/neighbors` | Other countries in the same subregion. These are not necessarily countries that share a border |
+| `/countries/random` | One country chosen at random |
+| `/search?q={query}` | Countries whose name or capital contains `query`, as `{ query, count, results }`; `400` if `q` is missing |
+| `/regions`, `/subregions`, `/currencies`, `/languages` | Sorted lists of the distinct values in the dataset |
+| `/stats` | Totals for countries, population, regions, subregions, currencies and languages; country counts by region; the most and least populous countries |
+| `/docs` | Interactive documentation |
+| `/openapi.json` | OpenAPI 3.0 specification |
 
-### Filter by Currency
-```http
-GET /countries?currency={currency}
-```
-**Example:**
-```bash
-GET /countries?currency=EUR  # All countries using Euro
-```
+### Filters on `/countries`
 
-### Filter by Language
-```http
-GET /countries?language={language}
-```
-**Example:**
-```bash
-GET /countries?language=Spanish
-```
+Filters are case-insensitive and can be combined, for example `/countries?region=Africa&language=French&limit=5`.
 
-### Search Countries
-```http
-GET /search?q={query}
-```
-Search by country name or capital.
+| Parameter | Matching | Example |
+| --- | --- | --- |
+| `region` | Exact: `Africa`, `Americas`, `Asia`, `Europe` or `Oceania` | `region=Europe` |
+| `subregion` | Contains | `subregion=Western` |
+| `currency` | Exact ISO 4217 code | `currency=EUR` |
+| `language` | Contains | `language=Spanish` |
+| `limit` | Positive integer; returns the first *n* results | `limit=10` |
 
-**Example:**
-```bash
-GET /search?q=united
-```
+## Data fields
 
-### Get Statistics
-```http
-GET /stats
-```
-Returns global statistics including total population, most/least populous countries, and country counts by region.
+| Field | Description |
+| --- | --- |
+| `name` | Common English name |
+| `code` | ISO 3166-1 alpha-2 code. Kosovo, which has no ISO code, uses the widely adopted `XK` |
+| `alpha3Code` | ISO 3166-1 alpha-3 code. Kosovo uses the World Bank's `XKX` |
+| `capital` | Capital city |
+| `region` | Geographic region |
+| `subregion` | Geographic subregion |
+| `population` | Estimated total population; see [Population data](#population-data) |
+| `languages` | Official languages; where no national official-language list exists, principal or recorded-use languages |
+| `currency` | ISO 4217 code of the main currency. Each country has one value, so secondary currencies are omitted |
+| `flag` | Flag emoji generated from `code` |
+| `callingCode` | International dialling prefix |
 
-### Get Country Flag
-```http
-GET /countries/{code}/flag
-```
-Returns just the flag emoji.
-
-## 🎯 Use Cases
-
-- **Learning & Education** - Build geography quiz apps
-- **Testing & Development** - Populate dropdowns and forms with real data
-- **Prototypes & Demos** - Quick country data for MVPs
-- **Data Visualization** - Create maps and charts
-- **Mobile Apps** - Country pickers with flags
-- **Tutorials** - Teach API consumption and async programming
-
-## 🛠️ Development
-
-```bash
-# Install dependencies
-npm install
-
-# Run locally
-npm run dev
-
-# Deploy to Cloudflare
-npm run deploy
-```
-
-## 📊 Data Fields
-
-Each country includes:
-- `name` - Country name
-- `code` - 2-letter ISO code
-- `alpha3Code` - 3-letter ISO code
-- `capital` - Capital city
-- `region` - Geographic region
-- `subregion` - Geographic subregion
-- `population` - Estimated total population
-- `languages` - Official languages, with principal or recorded-use languages where no national official-language list is available
-- `currency` - Currency code
-- `flag` - Flag emoji
-- `callingCode` - International dialing prefix; Vatican City uses Italy’s `+39` plan
+## Sources
 
 ### Population data
 
-Population figures are estimates, not live counts. The 195 records with World Bank coverage use the latest available `Population, total` series (2025 midyear estimates, updated 11 November 2026). Taiwan uses its latest household registration figure (about 23,204,000 at the end of October 2026). Vatican City uses the UK Permanent Committee on Geographical Names' 2025 estimate (750). Figures use different reference dates and methods, so small differences from national counts are expected.
+Population figures are estimates, not live counts. Sources use different reference dates and methods, so small differences from national figures are expected.
 
-Sources and attribution:
+- **195 records:** World Bank Group, [World Development Indicators, `Population, total` (SP.POP.TOTL)](https://data.worldbank.org/indicator/SP.POP.TOTL), 2025 midyear estimates (series updated 11 November 2026, retrieved 19 November 2026). Licensed under [CC BY 4.0](https://datacatalog.worldbank.org/public-licenses). This dataset adapts it by selecting country records and combining them with the two figures below.
+- **Taiwan:** Department of Household Registration, Ministry of the Interior, “Household registration statistics data analysis in Oct 2026” (2026), [source](https://www.ris.gov.tw/info-liferay/app/channel/newsEnglish/1?view=top). Household registration figure for the end of October 2026, rounded to the approximate value the source reports (about 23,204,000). Licensed under the [Open Government Data License v1.0](https://data.gov.tw/license) ([provider's reuse terms](https://www.ris.gov.tw/app/en/133)).
+- **Vatican City:** UK Permanent Committee on Geographical Names (PCGN), *Toponymic Factfile: European Microstates* (January 2026), [source](https://assets.publishing.service.gov.uk/media/6968cbde6958e5645144b08d/European_Microstates_Toponymic_Factfile.pdf). 2025 estimate of 750. © Crown copyright 2026, licensed under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
 
-- World Bank Group, [World Development Indicators, `Population, total` (SP.POP.TOTL)](https://data.worldbank.org/indicator/SP.POP.TOTL), 2025 data, retrieved 19 November 2026; and the World Bank country record for Kosovo’s `XKX` alpha-3 code. Data is provided under [CC BY 4.0](https://datacatalog.worldbank.org/public-licenses). This dataset adapts it by selecting country records, combining it with the Taiwan and Vatican City figures below, and using the Kosovo code from the [World Bank country API](https://api.worldbank.org/v2/country/XK?format=json).
-- Department of Household Registration, Ministry of the Interior (Taiwan), “Household registration statistics data analysis in Oct 2026” (2026), [source](https://www.ris.gov.tw/info-liferay/app/channel/newsEnglish/1?view=top), [reuse terms](https://www.ris.gov.tw/app/en/133), [Open Government Data License v1.0](https://data.gov.tw/license). The Taiwan value is rounded to the approximate figure reported by the source. Attribution statement: Department of Household Registration, Ministry of the Interior, 2026, Household registration statistics data analysis in Oct 2026. The Open Data is made available to the public under the Open Government Data License; users may use it subject to the licence’s terms. Open Government Data License: https://data.gov.tw/license
-- UK Permanent Committee on Geographical Names, *Toponymic Factfile: European Microstates* (January 2026), [source](https://assets.publishing.service.gov.uk/media/6968cbde6958e5645144b08d/European_Microstates_Toponymic_Factfile.pdf). The population figure is 750 (2025 data). © Crown copyright 2026. Contains public sector information licensed under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
+### Other fields
 
-### Country metadata and attribution
+- **Names, capitals, languages, currencies, calling codes and ISO codes:** a snapshot of [Wikidata](https://www.wikidata.org/) taken on 19 November 2026, using current statements. Display names are normalised for common use. Wikidata's structured data is released under [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+- **Kosovo's `alpha3Code`:** the World Bank's [country record](https://api.worldbank.org/v2/country/XK?format=json), licensed under [CC BY 4.0](https://datacatalog.worldbank.org/public-licenses).
+- **Regions and subregions:** the `REGION_UN` and `SUBREGION` fields of Natural Earth's [*Admin 0 – Countries* 1:10m dataset](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/), version 5.1.1, retrieved 19 November 2026. Kosovo is matched to Natural Earth's `KOS` record. Natural Earth data is in the [public domain](https://www.naturalearthdata.com/about/).
+- **Currency codes:** checked against the current ISO 4217 list maintained by [SIX](https://www.six-group.com/en/products-services/financial-information/market-reference-data/data-standards.html).
+- **Flags:** emoji generated from each country's two-letter code. No flag artwork is copied.
 
-- Country names, capitals, language statements, country-to-currency mappings, most calling codes, and most ISO codes use a snapshot of [Wikidata](https://www.wikidata.org/) structured data retrieved 19 November 2026. Wikidata releases structured data under [CC0](https://creativecommons.org/publicdomain/zero/1.0/). Values are selected from current statements; display names are normalized for common use. Wikidata recommends crediting it as the data source.
-- Geographic regions and subregions use the `REGION_UN` and `SUBREGION` fields from Natural Earth’s [*Admin 0 – Countries* 1:10m dataset](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/), version 5.1.1, retrieved 19 November 2026. The dataset is [public domain](https://www.naturalearthdata.com/about/). Kosovo is matched to Natural Earth’s `KOS` record.
-- Kosovo’s `alpha3Code` (`XKX`) uses the World Bank country record for Kosovo; other country codes use Wikidata. The World Bank’s data is provided under [CC BY 4.0](https://datacatalog.worldbank.org/public-licenses).
-- Equatorial Guinea’s capital, Ciudad de la Paz, follows [Decree-Law No. 1/2026](https://www.guineaecuatorialpress.com/noticias/decreto_ley_por_el_que_se_declara_la_ciudad_de_la_paz_djibloho_capital_de_la_republica_de_guinea_ecuatorial). English is listed for the United States under [Executive Order 14224](https://www.whitehouse.gov/presidential-actions/2025/03/designating-english-as-the-official-language-of-the-united-states/). Uruguay’s language list uses Wikidata’s recorded-use statements because it has no national official-language statement there.
-- Vatican City’s calling prefix is `+39`, its current Italian-plan prefix; the Vatican’s separate `+379` code is assigned but not currently used ([Vatican Telephone Service](https://www.vaticanstate.va/it/le-direzioni/direzione-delle-telecomunicazioni-e-dei-sistemi-informatici/servizio-reti-e-telefonia.html), [Vatican general information](https://www.vatican.va/roman_curia/secretariat_state/documents/informazione_generale/sp_ss_scv_info-generale_en.html)).
-- Currency code values are checked against the current ISO 4217 list maintained by [SIX](https://www.six-group.com/en/products-services/financial-information/market-reference-data/data-standards.html); the country-to-currency mappings come from Wikidata.
-- Flag emoji are generated from the country’s two-letter code; no flag artwork is copied.
+### Data notes
 
-The dataset combines these sources and retains their applicable reuse terms. World Bank data is attributed above and licensed CC BY 4.0; Taiwan’s population figure follows Taiwan’s Open Government Data License v1.0; the UK PCGN figure follows the Open Government Licence v3.0; Wikidata data is CC0; Natural Earth data is public domain. The repository’s MIT license applies to API software, not to the country dataset.
+Some values depart from a plain reading of the sources or need explaining:
 
-## 📖 Full Documentation
+- **Equatorial Guinea:** the capital is Ciudad de la Paz, following [Decree-Law No. 1/2026](https://www.guineaecuatorialpress.com/noticias/decreto_ley_por_el_que_se_declara_la_ciudad_de_la_paz_djibloho_capital_de_la_republica_de_guinea_ecuatorial).
+- **United States:** English is listed as the official language under [Executive Order 14224](https://www.whitehouse.gov/presidential-actions/2025/03/designating-english-as-the-official-language-of-the-united-states/).
+- **Uruguay:** Wikidata has no national official-language statement, so its recorded-use statements are used.
+- **Vatican City:** the calling code is `+39`, from the Italian numbering plan. The Vatican's own `+379` code is assigned but not in use ([Vatican Telephone Service](https://www.vaticanstate.va/it/le-direzioni/direzione-delle-telecomunicazioni-e-dei-sistemi-informatici/servizio-reti-e-telefonia.html), [Vatican general information](https://www.vatican.va/roman_curia/secretariat_state/documents/informazione_generale/sp_ss_scv_info-generale_en.html)).
 
-Visit the API root endpoint for complete documentation:
+## Licences
+
+**Software:** the API code is released under the [MIT License](LICENSE). The MIT License does not cover the country data.
+
+**Data:** each source keeps its own terms.
+
+- Wikidata data (CC0) and Natural Earth data (public domain) can be reused without conditions. They are credited above as a courtesy, and Wikidata asks to be credited.
+- The `population` field and Kosovo's `alpha3Code` come from sources that require attribution. If you redistribute them, include the following credits and say whether you changed the data:
+  - World Bank: *Source: World Bank, World Development Indicators, Population, total (SP.POP.TOTL), licensed under CC BY 4.0.*
+  - Taiwan: *Department of Household Registration, Ministry of the Interior, 2026, Household registration statistics data analysis in Oct 2026. The Open Data is made available to the public under the Open Government Data License; users may use it subject to the licence's terms. Open Government Data License: https://data.gov.tw/license*
+  - UK PCGN: *Contains public sector information licensed under the Open Government Licence v3.0.*
+
+The Taiwan statement follows the attribution format set out in the licence's annex. Its second sentence is translated from the licence's Chinese text.
+
+## Development
+
 ```bash
-GET /
+npm install      # install dependencies
+npm run dev      # run locally with Wrangler
+npm run deploy   # deploy to Cloudflare Workers
 ```
-
-## 📝 License
-
-The API software is MIT licensed. Country data has source-specific terms; see [Country metadata and attribution](#country-metadata-and-attribution) and [Population data](#population-data).
